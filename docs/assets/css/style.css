@@ -53,12 +53,18 @@
 }
 
 /* Base Styles */
+html {
+    -webkit-text-size-adjust: 100%;
+    text-size-adjust: 100%;
+}
+
 body {
     font-family: var(--font-main);
     font-weight: var(--font-weight-normal);
     background-color: var(--color-bg);
     color: var(--color-text);
-    overflow-x: hidden;
+    overflow-x: clip;
+    max-width: 100vw;
     line-height: 1.7;
 }
 
@@ -171,6 +177,7 @@ body {
     background: radial-gradient(ellipse at center, rgba(196, 149, 106, 0.08) 0%, transparent 50%),
         radial-gradient(ellipse at 80% 20%, rgba(139, 115, 85, 0.06) 0%, transparent 40%);
     animation: heroGlow 15s ease-in-out infinite;
+    pointer-events: none;
 }
 
 @keyframes heroGlow {
@@ -710,22 +717,56 @@ body {
         font-size: 1.25rem;
     }
 
-    /* テーブル - 横スクロール対応 */
-    .table-scroll {
-        overflow-x: auto;
-        -webkit-overflow-scrolling: touch;
-        margin: 0 -0.5rem;
-        padding: 0 0.5rem;
+    /* テーブル - モバイルカード形式（SmileRT_HP方式） */
+    .price-table,
+    .price-table thead,
+    .price-table tbody,
+    .price-table tr,
+    .price-table th,
+    .price-table td {
+        display: block;
+        width: 100%;
     }
 
-    .price-table {
-        min-width: 480px;
+    .price-table thead {
+        display: none;
+    }
+
+    .price-table tr {
+        padding: 1rem 0;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+    }
+
+    .price-table tr:last-child {
+        border-bottom: none;
+    }
+
+    .price-table td {
+        padding: 0.25rem 0;
+        border-bottom: none;
+        text-align: left;
+    }
+
+    .price-table td::before {
+        content: attr(data-label);
+        display: block;
+        font-size: 0.75rem;
+        font-weight: 500;
+        color: var(--color-text-light);
+        margin-bottom: 0.15rem;
     }
 
     /* ヒーローセクション */
     .hero {
-        min-height: 80vh;
+        min-height: 70vh;
         padding: var(--spacing-lg) var(--spacing-sm);
+    }
+
+    .hero::before {
+        top: -20%;
+        left: -20%;
+        width: 140%;
+        height: 140%;
     }
 
     .hero-cta {
