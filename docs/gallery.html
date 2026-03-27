@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery / Portfolio | caRamel#</title>
+    <meta name="description" content="caRamel# のポートフォリオ。これまでのMix作品をご覧いただけます。">
+    <link rel="stylesheet" href="assets/css/reset.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <style>
+        .playlist-container {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .playlist-wrapper {
+            position: relative;
+            padding-bottom: 56.25%;
+            height: 0;
+            overflow: hidden;
+            border-radius: var(--radius-lg);
+            box-shadow: var(--shadow-lg);
+            background: #000;
+        }
+
+        .playlist-wrapper iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+
+        .playlist-info {
+            text-align: center;
+            margin-top: 2rem;
+            padding: 1.5rem 2rem;
+            background: linear-gradient(135deg, var(--color-accent-primary) 0%, var(--color-accent-secondary) 100%);
+            border-radius: var(--radius-md);
+            color: white;
+        }
+
+        .playlist-info p {
+            color: white;
+            margin-bottom: 0.5rem;
+        }
+
+        .playlist-info .hint {
+            font-size: 1rem;
+            font-weight: 500;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.75rem;
+        }
+
+        .playlist-info .hint svg {
+            width: 24px;
+            height: 24px;
+            fill: white;
+        }
+
+        .playlist-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            margin-top: 1rem;
+            padding: 0.75rem 1.5rem;
+            background: white;
+            color: var(--color-accent-secondary);
+            border-radius: var(--radius-full);
+            font-weight: 500;
+            transition: var(--transition-normal);
+        }
+
+        .playlist-link:hover {
+            background: rgba(255, 255, 255, 0.9);
+            transform: translateY(-2px);
+        }
+
+        .playlist-link svg {
+            width: 20px;
+            height: 20px;
+            fill: currentColor;
+        }
+
+        .feature-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin-top: 3rem;
+        }
+
+        .feature-card {
+            padding: 2rem;
+            background: var(--color-bg);
+            border-radius: var(--radius-md);
+            box-shadow: var(--shadow-sm);
+            text-align: center;
+            transition: var(--transition-normal);
+        }
+
+        .feature-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-md);
+        }
+
+        .feature-card h3 {
+            font-size: 1.1rem;
+            margin-bottom: 0.5rem;
+            color: var(--color-accent-primary);
+        }
+
+        .feature-card p {
+            font-size: 0.9rem;
+            color: var(--color-text-light);
+            line-height: 1.6;
+        }
+
+        /* PC向け説明は非表示、スマホ向け説明を表示 */
+        .hint-pc {
+            display: flex;
+        }
+
+        .hint-mobile {
+            display: none;
+        }
+
+        /* スマホ向けレスポンシブ */
+        @media (max-width: 768px) {
+            .playlist-container {
+                margin: 0 -1rem;
+            }
+
+            .playlist-wrapper {
+                border-radius: 0;
+            }
+
+            .playlist-info {
+                border-radius: 0;
+                padding: 1.25rem 1rem;
+                margin-top: 0;
+            }
+
+            .playlist-info .hint {
+                font-size: 0.9rem;
+                flex-direction: column;
+                gap: 0.5rem;
+            }
+
+            .hint-pc {
+                display: none;
+            }
+
+            .hint-mobile {
+                display: flex;
+            }
+
+            .playlist-link {
+                width: 100%;
+                justify-content: center;
+                padding: 1rem 1.5rem;
+            }
+
+            .feature-cards {
+                grid-template-columns: 1fr;
+                gap: 1rem;
+                margin-top: 2rem;
+            }
+
+            .feature-card {
+                padding: 1.5rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header class="header">
+        <div class="container">
+            <a href="index.html" class="logo">caRamel#</a>
+            <nav class="nav-menu">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="gallery.html" class="nav-link active">Gallery</a>
+                <a href="instagram.html" class="nav-link">Instagram</a>
+                <a href="service.html" class="nav-link">Service</a>
+                <a href="contact.html" class="nav-link">Contact</a>
+            </nav>
+            <button class="nav-toggle" aria-label="メニュー"><span></span><span></span><span></span></button>
+        </div>
+    </header>
+
+    <section class="page-header">
+        <div class="container">
+            <h1>Gallery / Portfolio</h1>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="container">
+            <p style="text-align: center; color: var(--color-text-light); margin-bottom: 2rem;">
+                これまで担当させていただいた作品の一部をご紹介します。
+            </p>
+
+            <!-- プレイリスト埋め込み -->
+            <div class="playlist-container fade-in">
+                <div class="playlist-wrapper">
+                    <iframe
+                        src="https://www.youtube.com/embed/videoseries?list=PLBazqsiSyyIzC6DXES-f0s0yifo024Qll&rel=0"
+                        title="caRamel# Portfolio Playlist"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
+                    </iframe>
+                </div>
+
+                <div class="playlist-info">
+                    <!-- PC向け説明 -->
+                    <p class="hint hint-pc">
+                        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M3 13h2v-2H3v2zm0 4h2v-2H3v2zm0-8h2V7H3v2zm4 4h14v-2H7v2zm0 4h14v-2H7v2zM7 7v2h14V7H7z" />
+                        </svg>
+                        プレイヤー右上のメニューから全ての動画を選択できます
+                    </p>
+                    <!-- スマホ向け説明 -->
+                    <p class="hint hint-mobile">
+                        全ての作品はYouTubeプレイリストからご覧いただけます
+                    </p>
+                    <a href="https://www.youtube.com/playlist?list=PLBazqsiSyyIzC6DXES-f0s0yifo024Qll" target="_blank"
+                        rel="noopener noreferrer" class="playlist-link">
+                        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814z" />
+                            <path d="M9.545 15.568V8.432L15.818 12l-6.273 3.568z" fill="currentColor" />
+                        </svg>
+                        YouTubeでプレイリストを開く
+                    </a>
+                </div>
+            </div>
+
+            <!-- 特徴カード -->
+            <div class="feature-cards">
+                <div class="feature-card fade-in">
+                    <h3>歌ってみた</h3>
+                    <p>ボーカルを最大限に活かしたMixで、楽曲の魅力を引き出します。</p>
+                </div>
+                <div class="feature-card fade-in">
+                    <h3>オリジナル曲</h3>
+                    <p>アーティストの個性を尊重した、オリジナリティあふれるサウンドメイキング。</p>
+                </div>
+                <div class="feature-card fade-in">
+                    <h3>高品質</h3>
+                    <p>プロクオリティの仕上がりで、あなたの作品を最高の形にお届けします。</p>
+                </div>
+            </div>
+
+            <!-- 依頼への導線 -->
+            <div style="text-align: center; margin-top: 4rem;" class="fade-in">
+                <p style="font-size: 1.2rem; margin-bottom: 1rem; font-weight: 500;">あなたの作品も最高のサウンドに</p>
+                <a href="service.html" class="hero-cta">ご依頼について詳しく見る →</a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container footer-content">
+            <div class="footer-links">
+                <a href="privacy.html">プライバシーポリシー</a>
+                <a href="terms.html">利用規約</a>
+            </div>
+            <p class="copyright">&copy; 2026 caRamel#. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script src="assets/js/main.js"></script>
+</body>
+
+</html>

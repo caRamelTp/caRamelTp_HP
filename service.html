@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Service / 依頼について | caRamel#</title>
+    <meta name="description" content="caRamel# へのMix依頼について。料金・注意事項・依頼方法をご案内します。">
+    <link rel="stylesheet" href="assets/css/reset.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <style>
+        .service-card {
+            background: white;
+            border-radius: var(--radius-md);
+            padding: 2rem;
+            box-shadow: var(--shadow-sm);
+            margin-bottom: 1.5rem;
+        }
+
+        .service-card h3 {
+            color: var(--color-accent-primary);
+            margin-bottom: 1rem;
+            font-size: 1.25rem;
+        }
+
+        .price-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1rem 0;
+        }
+
+        .price-table th,
+        .price-table td {
+            padding: 1rem;
+            text-align: left;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+        }
+
+        .price-table th {
+            background: linear-gradient(135deg, rgba(196, 149, 106, 0.1) 0%, rgba(139, 115, 85, 0.05) 100%);
+            font-weight: 500;
+        }
+
+        .price-highlight {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--color-accent-primary);
+        }
+
+        .notice-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .notice-list li {
+            padding: 0.75rem 0;
+            padding-left: 1.5rem;
+            position: relative;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+        }
+
+        .notice-list li::before {
+            content: "•";
+            position: absolute;
+            left: 0;
+            color: var(--color-accent-primary);
+            font-weight: bold;
+        }
+
+        .cta-section {
+            text-align: center;
+            padding: 3rem;
+            background: var(--color-gradient);
+            border-radius: var(--radius-lg);
+            color: white;
+            margin-top: 2rem;
+        }
+
+        .cta-section h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-top: 1.5rem;
+        }
+
+        .cta-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 1rem 2rem;
+            background: white;
+            color: var(--color-text);
+            border-radius: var(--radius-full);
+            font-weight: 500;
+            transition: var(--transition-normal);
+        }
+
+        .cta-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        /* スマホ向けレスポンシブ */
+        @media (max-width: 768px) {
+            .service-card {
+                padding: 1.5rem;
+                margin-bottom: 1.5rem;
+            }
+
+            .price-table {
+                font-size: 0.85rem;
+            }
+
+            .price-table th,
+            .price-table td {
+                padding: 0.75rem 0.5rem;
+            }
+
+            .price-highlight {
+                font-size: 1.15rem;
+            }
+
+            .cta-section {
+                padding: 2rem 1.25rem;
+                border-radius: var(--radius-md);
+            }
+
+            .cta-btn {
+                width: 100%;
+                justify-content: center;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header class="header">
+        <div class="container">
+            <a href="index.html" class="logo">caRamel#</a>
+            <nav class="nav-menu">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="gallery.html" class="nav-link">Gallery</a>
+                <a href="instagram.html" class="nav-link">Instagram</a>
+                <a href="service.html" class="nav-link active">Service</a>
+                <a href="contact.html" class="nav-link">Contact</a>
+            </nav>
+            <button class="nav-toggle" aria-label="メニュー"><span></span><span></span><span></span></button>
+        </div>
+    </header>
+
+    <section class="page-header">
+        <div class="container">
+            <h1>Service / 依頼について</h1>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="container" style="max-width: 900px;">
+
+            <!-- 料金プラン -->
+            <div class="service-card fade-in">
+                <h3>・料金プラン</h3>
+
+                <h4 style="margin: 1.5rem 0 1rem; font-size: 1.1rem;">・メインプラン</h4>
+                <table class="price-table">
+                    <tr>
+                        <th>プラン名</th>
+                        <th>料金</th>
+                        <th>内容</th>
+                    </tr>
+                    <tr>
+                        <td><strong>基本プラン</strong></td>
+                        <td><span class="price-highlight">¥8,000</span></td>
+                        <td>フルコーラス / 編集〜Mix〜マスタリングまで<br><small style="color: var(--color-text-light);">10トラックまで /
+                                納期：約2週間</small></td>
+                    </tr>
+                    <tr>
+                        <td><strong>ワンコーラスプラン</strong></td>
+                        <td><span class="price-highlight">¥4,000</span></td>
+                        <td>ワンコーラス分のMix<br><small style="color: var(--color-text-light);">5トラックまで / 納期：約2週間</small></td>
+                    </tr>
+                    <tr>
+                        <td><strong>Short動画用プラン</strong></td>
+                        <td><span class="price-highlight">¥3,000</span></td>
+                        <td>TikTok / YouTube Shorts / Twitter用（サビ or ワンフレーズ）<br><small
+                                style="color: var(--color-text-light);">5トラックまで / 納期：約1週間</small></td>
+                    </tr>
+                    <tr>
+                        <td><strong>マスタリングプラン</strong></td>
+                        <td><span class="price-highlight">¥2,000</span></td>
+                        <td>2mixデータ（ボーカル・inst済み）のマスタリングのみ</td>
+                    </tr>
+                </table>
+
+                <h4 style="margin: 1.5rem 0 1rem; font-size: 1.1rem;">・Live用音源作成プラン</h4>
+                <table class="price-table">
+                    <tr>
+                        <th>内容</th>
+                        <th>料金</th>
+                    </tr>
+                    <tr>
+                        <td>リテイク（過去にcaRamel#がMixした楽曲）</td>
+                        <td>¥3,500〜</td>
+                    </tr>
+                    <tr>
+                        <td>新規作成（フルコーラス）</td>
+                        <td>¥7,000〜</td>
+                    </tr>
+                    <tr>
+                        <td>新規作成（ワンコーラス）</td>
+                        <td>¥3,500〜</td>
+                    </tr>
+                </table>
+
+                <h4 style="margin: 1.5rem 0 1rem; font-size: 1.1rem;">・オプション</h4>
+                <table class="price-table">
+                    <tr>
+                        <th>オプション名</th>
+                        <th>料金</th>
+                    </tr>
+                    <tr>
+                        <td>コラボ（1人追加ごと）</td>
+                        <td>+¥3,000</td>
+                    </tr>
+                    <tr>
+                        <td>ハモリ作成（1トラック）</td>
+                        <td>+¥1,500</td>
+                    </tr>
+                    <tr>
+                        <td>追加トラック（プラン上限超過分、1トラックごと）</td>
+                        <td>+¥1,000</td>
+                    </tr>
+                    <tr>
+                        <td>ピッチ・タイミング補正のみ（ワンコーラス）</td>
+                        <td>¥3,000</td>
+                    </tr>
+                    <tr>
+                        <td>ピッチ・タイミング補正のみ（フルコーラス）</td>
+                        <td>¥6,000</td>
+                    </tr>
+                    <tr>
+                        <td>歌唱リテイク（依頼者様都合の再録音）</td>
+                        <td>+¥1,000 / 1トラック</td>
+                    </tr>
+                    <tr>
+                        <td>動画エンコード</td>
+                        <td>無料（依頼時にお申し付けください）</td>
+                    </tr>
+                </table>
+
+                <p style="font-size: 0.9rem; color: var(--color-text-light); margin-top: 1rem;">※
+                    Mixリテイクは何度でも無料です。最高なものを一緒に作りましょう！</p>
+            </div>
+
+            <!-- 依頼方法 -->
+            <div class="service-card fade-in">
+                <h3>・ご依頼方法</h3>
+                <ul class="notice-list">
+                    <li><strong>X (Twitter) DM</strong>: <a href="https://x.com/caRamelTp_nico" target="_blank"
+                            style="color: var(--color-accent-primary);">@caRamelTp_nico</a></li>
+                    <li><strong>メール</strong>: <a href="mailto:carameltp.nico@gmail.com"
+                            style="color: var(--color-accent-primary);">carameltp.nico@gmail.com</a></li>
+                    <li><strong>Discord</strong>: carameltp_nico</li>
+                </ul>
+            </div>
+
+            <!-- 依頼時の注意事項 -->
+            <div class="service-card fade-in">
+                <h3>・ご依頼時の注意事項</h3>
+                <ul class="notice-list">
+                    <li>ご依頼は<strong>録音が全て終わった状態</strong>でお願いします。（記念日用等や、相談等はお気軽にどうぞ）</li>
+                    <li>Mixリテイクは何度でも無料です。お気軽に相談してください。</li>
+                    <li>依頼者様からの歌唱リテイクは1トラックにつき ¥1,000 を頂きます。</li>
+                </ul>
+            </div>
+
+            <!-- ファイル提出方法 -->
+            <div class="service-card fade-in">
+                <h3>・ファイル提出方法</h3>
+                <ul class="notice-list">
+                    <li>一つのフォルダにまとめてアップローダサイト経由にてURLでお送りください。<br>
+                        （使い方がわからない場合もお気軽に相談してください。<a href="https://gigafile.nu/" target="_blank"
+                            style="color: var(--color-accent-primary);">ギガファイル便</a>など）</li>
+                    <li>公式配布されている二次創作可能な<strong>inst音源を同梱</strong>してください。</li>
+                    <li>フォルダ名は「<strong>ご依頼主名・曲名・BPM</strong>」をご記載ください。</li>
+                    <li>MacOS等のApple社製OSをお使いの方は、文字化け防止のため<strong>ファイル名を半角英数字</strong>でのご記入をお願いします。</li>
+                </ul>
+            </div>
+
+            <!-- お支払いについて -->
+            <div class="service-card fade-in">
+                <h3>・お支払いについて</h3>
+                <ul class="notice-list">
+                    <li>お支払い方法は<strong>銀行振込</strong>でお願いします。</li>
+                    <li>どうしてもという場合のみアマギフでもお支払い可能です。依頼前にご確認ください。</li>
+                    <li>アマギフでのお支払いの場合、手数料として+¥500を頂きます。</li>
+                    <li>すべてのご依頼を<strong>「前払い」</strong>とさせていただきます。</li>
+                    <li>振込先は音源素材確認後お伝えします。</li>
+                </ul>
+            </div>
+
+            <!-- 企業様向け -->
+            <div class="service-card fade-in">
+                <h3>・企業様・事務所所属の方へ</h3>
+                <p style="color: var(--color-text-light);">企業様 / 事務所などに所属している方は別途ご相談いただきますようお願いします。</p>
+            </div>
+
+            <!-- CTA -->
+            <div class="cta-section fade-in">
+                <h3>ご依頼・ご相談はお気軽に</h3>
+                <p>あなたの作品を最高のサウンドに仕上げます</p>
+                <div class="cta-buttons">
+                    <a href="https://x.com/caRamelTp_nico" target="_blank" class="cta-btn">
+                        <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
+                            <path
+                                d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
+                        </svg>
+                        X (Twitter) DM
+                    </a>
+                    <a href="mailto:carameltp.nico@gmail.com" class="cta-btn">
+                        <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
+                            <path
+                                d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z" />
+                        </svg>
+                        メールで問い合わせ
+                    </a>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container footer-content">
+            <div class="footer-links">
+                <a href="privacy.html">プライバシーポリシー</a>
+                <a href="terms.html">利用規約</a>
+            </div>
+            <p class="copyright">&copy; 2026 caRamel#. All Rights Reserved.</p>
+        </div>
+    </footer>
+    <script src="assets/js/main.js"></script>
+</body>
+
+</html>

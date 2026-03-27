@@ -1,0 +1,36 @@
+{
+    "name": "caramel-hp",
+    "version": "1.0.0",
+    "description": "caRamel# 公式クリエイターサイト",
+    "main": "index.html",
+    "scripts": {
+        "dev": "next dev",
+        "build": "next build",
+        "start": "next start",
+        "lint": "next lint"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/caRamelTp/caRamelTp_HP.git"
+    },
+    "author": "caRamel#",
+    "license": "MIT",
+    "homepage": "https://carameltp.github.io/caRamelTp_HP/",
+    "keywords": [],
+    "type": "module",
+    "bugs": {
+        "url": "https://github.com/caRamelTp/caRamelTp_HP/issues"
+    },
+    "dependencies": {
+        "lucide-react": "^0.563.0",
+        "next": "^16.1.4",
+        "react": "^19.2.3",
+        "react-dom": "^19.2.3"
+    },
+    "devDependencies": {
+        "@types/node": "^25.0.10",
+        "@types/react": "^19.2.9",
+        "@types/react-dom": "^19.2.3",
+        "typescript": "^5.9.3"
+    }
+}
