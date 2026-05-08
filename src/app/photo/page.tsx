@@ -195,7 +195,7 @@ export default function PhotoPage() {
                             </table>
                             <ul className="notice-list">
                                 <li>関東以外の遠征撮影も承っております。上記料金に交通費分上乗せさせていただきます。</li>
-                                <li>目安：東京都内 30,000円（交通費含む）</li>
+                                <li>目安：大阪府内 30,000円（交通費含む）</li>
                             </ul>
 
                             <h4 style={{ margin: '1.5rem 0 1rem', fontSize: '1.1rem' }}>【動画撮影】</h4>
@@ -208,11 +208,11 @@ export default function PhotoPage() {
                                     </tr>
                                     <tr>
                                         <td>全体の動画のみ（片部）</td>
-                                        <td><span className="price-highlight">¥15,000</span>（交通費含む※関西圏のみ）</td>
+                                        <td><span className="price-highlight">¥15,000</span>（交通費含む※関東圏のみ）</td>
                                     </tr>
                                     <tr>
                                         <td>全体の動画のみ（両部）</td>
-                                        <td><span className="price-highlight">¥20,000</span>（交通費含む※関西圏のみ）</td>
+                                        <td><span className="price-highlight">¥20,000</span>（交通費含む※関東圏のみ）</td>
                                     </tr>
                                 </tbody>
                             </table>
