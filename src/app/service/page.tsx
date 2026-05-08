@@ -69,6 +69,20 @@ export default function Service() {
                                     ))}
                                 </tbody>
                             </table>
+
+                            <h4 style={{ margin: '1.5rem 0 1rem', fontSize: '1.1rem' }}>・パラミックス</h4>
+                            <table className="price-table">
+                                <thead>
+                                    <tr><th>内容</th><th>料金</th></tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>パラミックス</td>
+                                        <td><span className="price-highlight">¥13,000</span></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+
                             <p style={{ fontSize: '0.9rem', color: '#6B6560', marginTop: '1rem' }}>※ Mixリテイクは何度でも無料です。最高なものを一緒に作りましょう！</p>
                         </div>
 

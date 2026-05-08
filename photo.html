@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Photo | caRamel#</title>
+    <meta name="description" content="caRamel# の写真撮影サービス。ライブ撮影・ポートレート撮影のご依頼を承っています。">
+    <link rel="stylesheet" href="assets/css/reset.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <style>
+        .instagram-embed {
+            max-width: 540px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .instagram-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 1rem 2rem;
+            background: var(--color-gradient);
+            color: white;
+            border-radius: var(--radius-full);
+            font-weight: 500;
+            font-size: 1.1rem;
+            transition: var(--transition-normal);
+            margin-top: 2rem;
+        }
+
+        .instagram-link:hover {
+            transform: translateY(-3px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .photo-card {
+            background: white;
+            border-radius: var(--radius-md);
+            padding: 2rem;
+            box-shadow: var(--shadow-sm);
+            margin-bottom: 1.5rem;
+        }
+
+        .photo-card h3 {
+            color: var(--color-accent-primary);
+            margin-bottom: 1rem;
+            font-size: 1.25rem;
+        }
+
+        .price-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1rem 0;
+        }
+
+        .price-table th,
+        .price-table td {
+            padding: 1rem;
+            text-align: left;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+        }
+
+        .price-table th {
+            background: linear-gradient(135deg, rgba(196, 149, 106, 0.1) 0%, rgba(139, 115, 85, 0.05) 100%);
+            font-weight: 500;
+        }
+
+        .price-highlight {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--color-accent-primary);
+        }
+
+        .equipment-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .equipment-list li {
+            padding: 0.5rem 0;
+            padding-left: 1.5rem;
+            position: relative;
+            color: var(--color-text-light);
+        }
+
+        .equipment-list li::before {
+            content: "•";
+            position: absolute;
+            left: 0;
+            color: var(--color-accent-primary);
+            font-weight: bold;
+        }
+
+        .equipment-category {
+            font-weight: 600;
+            color: var(--color-text);
+            margin-top: 1rem;
+            margin-bottom: 0.25rem;
+        }
+
+        .notice-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .notice-list li {
+            padding: 0.75rem 0;
+            padding-left: 1.5rem;
+            position: relative;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+        }
+
+        .notice-list li::before {
+            content: "•";
+            position: absolute;
+            left: 0;
+            color: var(--color-accent-primary);
+            font-weight: bold;
+        }
+
+        @media (max-width: 768px) {
+            .photo-card {
+                padding: 1.5rem;
+            }
+
+            .price-table {
+                font-size: 0.85rem;
+            }
+
+            .price-table th,
+            .price-table td {
+                padding: 0.75rem 0.5rem;
+            }
+
+            .price-highlight {
+                font-size: 1.15rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header class="header">
+        <div class="container">
+            <a href="index.html" class="logo">caRamel#</a>
+            <nav class="nav-menu">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="gallery.html" class="nav-link">Gallery</a>
+                <a href="photo.html" class="nav-link active">Photo</a>
+                <a href="service.html" class="nav-link">Service</a>
+                <a href="contact.html" class="nav-link">Contact</a>
+            </nav>
+            <button class="nav-toggle" aria-label="メニュー"><span></span><span></span><span></span></button>
+        </div>
+    </header>
+
+    <section class="page-header">
+        <div class="container">
+            <h1>Photo</h1>
+        </div>
+    </section>
+
+    <!-- Instagram セクション -->
+    <section class="section">
+        <div class="container">
+            <div class="instagram-embed fade-in">
+                <p style="color: var(--color-text-light); margin-bottom: 2rem;">写真作品を中心に投稿しています。</p>
+
+                <div
+                    style="background: white; border-radius: var(--radius-md); padding: 2rem; box-shadow: var(--shadow-sm);">
+                    <svg viewBox="0 0 24 24" width="64" height="64" style="margin-bottom: 1rem;"
+                        fill="var(--color-accent-primary)">
+                        <path
+                            d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z" />
+                    </svg>
+                    <h3 style="margin-bottom: 0.5rem;">@carameltp_cam</h3>
+                    <p style="color: var(--color-text-light); font-size: 0.9rem;">Photo works by caRamel#</p>
+
+                    <a href="https://www.instagram.com/carameltp_cam/" target="_blank" rel="noopener noreferrer"
+                        class="instagram-link">
+                        <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
+                            <path
+                                d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z" />
+                        </svg>
+                        Instagramで見る
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 撮影依頼セクション -->
+    <section class="section" style="background: linear-gradient(135deg, rgba(196, 149, 106, 0.06) 0%, rgba(139, 115, 85, 0.04) 100%);">
+        <div class="container" style="max-width: 900px;">
+            <h2 class="section-title">撮影依頼について</h2>
+
+            <div class="photo-card fade-in">
+                <h3>・撮影について</h3>
+                <p style="color: var(--color-text-light); line-height: 1.8;">
+                    主に関東を中心にライブ撮影、ポートレート撮影等を中心に<br>
+                    撮影をさせて頂いています。
+                </p>
+            </div>
+
+            <div class="photo-card fade-in">
+                <h3>・使用機材</h3>
+                <p class="equipment-category">ボディ：</p>
+                <ul class="equipment-list">
+                    <li>Nikon Z5II</li>
+                    <li>Nikon D800</li>
+                </ul>
+                <p class="equipment-category">レンズ：</p>
+                <ul class="equipment-list">
+                    <li>NIKKOR Z 24-70mm f/2.8 S II</li>
+                    <li>NIKKOR Z 70-200mm f/2.8 VR S</li>
+                    <li>NIKKOR Z 24-50mm f/4-6.3</li>
+                    <li>FUJINON 55mm f/2.2</li>
+                    <li>Super-Takumar 55mm f/1.8</li>
+                    <li>NIKKOR 50mm f/1.4</li>
+                    <li>TAMRON 28-75mm f/2.8 MACRO</li>
+                    <li>AF NIKKOR 35-135mm f/3.5-4.5</li>
+                </ul>
+            </div>
+
+            <div class="photo-card fade-in">
+                <h3>・料金プラン</h3>
+
+                <h4 style="margin: 1.5rem 0 1rem; font-size: 1.1rem;">【ライブ撮影(写真・個人)】</h4>
+                <table class="price-table">
+                    <tr>
+                        <th>内容</th>
+                        <th>料金</th>
+                    </tr>
+                    <tr>
+                        <td data-label="内容">ライブ撮影（写真・個人）</td>
+                        <td data-label="料金"><span class="price-highlight">¥7,000</span> ＋交通費</td>
+                    </tr>
+                </table>
+                <ul class="notice-list">
+                    <li>個人依頼される場合は主催者様に許可をいただいてください。</li>
+                    <li>交通費は最寄り駅よりライブハウスの最寄り駅までの金額となります。</li>
+                </ul>
+
+                <h4 style="margin: 1.5rem 0 1rem; font-size: 1.1rem;">【ライブ撮影(写真・全体)】</h4>
+                <table class="price-table">
+                    <tr>
+                        <th>内容</th>
+                        <th>料金</th>
+                    </tr>
+                    <tr>
+                        <td data-label="内容">片部</td>
+                        <td data-label="料金"><span class="price-highlight">¥15,000</span>（交通費含む※関東圏のみ）</td>
+                    </tr>
+                    <tr>
+                        <td data-label="内容">両部</td>
+                        <td data-label="料金"><span class="price-highlight">¥20,000</span>（交通費含む※関東圏のみ）</td>
+                    </tr>
+                </table>
+                <ul class="notice-list">
+                    <li>関東以外の遠征撮影も承っております。上記料金に交通費分上乗せさせていただきます。</li>
+                    <li>目安：東京都内 30,000円（交通費含む）</li>
+                </ul>
+
+                <h4 style="margin: 1.5rem 0 1rem; font-size: 1.1rem;">【動画撮影】</h4>
+                <table class="price-table">
+                    <tr>
+                        <th>内容</th>
+                        <th>料金</th>
+                    </tr>
+                    <tr>
+                        <td data-label="内容">映像（定点）1曲あたり</td>
+                        <td data-label="料金"><span class="price-highlight">¥500</span>（一眼レフ使用）</td>
+                    </tr>
+                    <tr>
+                        <td data-label="内容">全体の動画のみ（片部）</td>
+                        <td data-label="料金"><span class="price-highlight">¥15,000</span>（交通費含む※関西圏のみ）</td>
+                    </tr>
+                    <tr>
+                        <td data-label="内容">全体の動画のみ（両部）</td>
+                        <td data-label="料金"><span class="price-highlight">¥20,000</span>（交通費含む※関西圏のみ）</td>
+                    </tr>
+                </table>
+                <ul class="notice-list">
+                    <li>機材の関係で写真または動画どちらかのご依頼しか承れませんのでご了承ください。</li>
+                </ul>
+            </div>
+
+            <div class="photo-card fade-in">
+                <h3>・キャンセル料について</h3>
+                <table class="price-table">
+                    <tr>
+                        <th>期間</th>
+                        <th>キャンセル料</th>
+                    </tr>
+                    <tr>
+                        <td data-label="期間">2週間以内</td>
+                        <td data-label="キャンセル料"><strong>50%</strong></td>
+                    </tr>
+                    <tr>
+                        <td data-label="期間">1週間以内</td>
+                        <td data-label="キャンセル料"><strong>100%</strong></td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container footer-content">
+            <div class="footer-links">
+                <a href="privacy.html">プライバシーポリシー</a>
+                <a href="terms.html">利用規約</a>
+            </div>
+            <p class="copyright">&copy; 2026 caRamel#. All Rights Reserved.</p>
+        </div>
+    </footer>
+    <script src="assets/js/main.js"></script>
+</body>
+
+</html>
