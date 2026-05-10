@@ -27,6 +27,12 @@ export default function Contact() {
                         </div>
                     </div>
                 </section>
+
+                <div style={{ textAlign: 'center', padding: '2rem 0' }}>
+                    <a href="https://www.amazon.jp/hz/wishlist/ls/20TH7BMLTU16V?ref_=wl_share" target="_blank" rel="noopener noreferrer" style={{ fontSize: '0.8rem', color: '#A09890', opacity: 0.7, textDecoration: 'none', transition: 'opacity 0.3s' }}>
+                        🎁 Amazon ほしい物リスト
+                    </a>
+                </div>
             </main>
             <Footer />
         </>
