@@ -105,6 +105,13 @@ img {
     display: block;
 }
 
+/* Override reset.css svg block rule for inline icons */
+svg {
+    display: inline-block;
+    vertical-align: middle;
+    flex-shrink: 0;
+}
+
 button {
     background: none;
     border: none;
@@ -178,7 +185,7 @@ button {
 
 .nav-link {
     font-family: var(--font-en);
-    font-size: 0.875rem;
+    font-size: 0.9375rem;
     font-weight: 400;
     color: var(--color-text-light);
     letter-spacing: 0.05em;
@@ -387,7 +394,7 @@ button {
 
 .section-label {
     font-family: var(--font-en);
-    font-size: 0.6875rem;
+    font-size: 0.8125rem;
     font-weight: 500;
     letter-spacing: 0.2em;
     text-transform: uppercase;
@@ -406,9 +413,9 @@ button {
 }
 
 .section-desc {
-    font-size: 0.9375rem;
+    font-size: 1rem;
     color: var(--color-text-light);
-    max-width: 520px;
+    max-width: 560px;
     line-height: 1.9;
 }
 
@@ -463,13 +470,20 @@ button {
     border: none;
 }
 
+.portfolio-card__media svg {
+    width: 48px;
+    height: 48px;
+}
+
 .portfolio-card__body {
     padding: 1.5rem;
 }
 
 .portfolio-card__icon {
-    width: 32px;
-    height: 32px;
+    width: 28px;
+    height: 28px;
+    min-width: 28px;
+    min-height: 28px;
     margin-bottom: 0.75rem;
     fill: var(--color-accent);
 }
@@ -477,15 +491,15 @@ button {
 .portfolio-card__title {
     font-family: var(--font-en);
     font-size: 1.125rem;
-    font-weight: 500;
+    font-weight: 600;
     margin-bottom: 0.5rem;
 }
 
 .portfolio-card__text {
-    font-size: 0.8125rem;
+    font-size: 0.875rem;
     color: var(--color-text-light);
     margin-bottom: 1rem;
-    line-height: 1.7;
+    line-height: 1.8;
 }
 
 .portfolio-card__link {
@@ -493,17 +507,24 @@ button {
     align-items: center;
     gap: 0.5rem;
     font-family: var(--font-en);
-    font-size: 0.8125rem;
+    font-size: 0.875rem;
     font-weight: 500;
     color: var(--color-accent);
     transition: gap var(--duration-fast) var(--ease);
+}
+
+.portfolio-card__link svg {
+    width: 16px;
+    height: 16px;
+    min-width: 16px;
+    fill: currentColor;
 }
 
 .portfolio-card__link:hover {
     gap: 0.75rem;
 }
 
-.portfolio-card__link svg {
+.portfolio-card__link svg.arrow-icon {
     width: 14px;
     height: 14px;
     fill: currentColor;
@@ -539,7 +560,7 @@ button {
     padding: 0.75rem 1.5rem;
     border-radius: var(--radius-full);
     font-family: var(--font-en);
-    font-size: 0.8125rem;
+    font-size: 0.875rem;
     font-weight: 500;
     letter-spacing: 0.02em;
     transition: all var(--duration-fast) var(--ease);
@@ -549,6 +570,8 @@ button {
 .btn svg {
     width: 16px;
     height: 16px;
+    min-width: 16px;
+    min-height: 16px;
     fill: currentColor;
 }
 
@@ -727,8 +750,9 @@ button {
 }
 
 .detail-link svg {
-    width: 14px;
-    height: 14px;
+    width: 16px;
+    height: 16px;
+    min-width: 16px;
     fill: currentColor;
 }
 
@@ -764,12 +788,14 @@ button {
 .contact-card__icon {
     width: 28px;
     height: 28px;
+    min-width: 28px;
+    min-height: 28px;
     fill: var(--color-accent);
 }
 
 .contact-card__label {
     font-family: var(--font-en);
-    font-size: 0.75rem;
+    font-size: 0.8125rem;
     font-weight: 500;
     letter-spacing: 0.1em;
     text-transform: uppercase;
@@ -777,8 +803,9 @@ button {
 }
 
 .contact-card__value {
-    font-size: 0.9375rem;
+    font-size: 1rem;
     font-weight: 500;
+    word-break: break-all;
 }
 
 .contact-sub {
@@ -793,11 +820,12 @@ button {
 }
 
 .social-icon {
-    display: flex;
+    display: inline-flex;
     align-items: center;
     justify-content: center;
     width: 44px;
     height: 44px;
+    min-width: 44px;
     border-radius: var(--radius-full);
     border: 1px solid var(--color-border-dark);
     transition: all var(--duration-fast) var(--ease);
@@ -815,6 +843,8 @@ button {
 .social-icon svg {
     width: 18px;
     height: 18px;
+    min-width: 18px;
+    min-height: 18px;
     fill: var(--color-text);
     transition: fill var(--duration-fast) var(--ease);
 }
@@ -960,6 +990,8 @@ button {
 .fixed-cta__btn svg {
     width: 16px;
     height: 16px;
+    min-width: 16px;
+    min-height: 16px;
     fill: currentColor;
 }
 
