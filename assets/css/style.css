@@ -764,13 +764,16 @@ button { background: none; border: none; cursor: pointer; font-family: inherit; 
 
     .nav-menu {
         position: fixed;
-        inset: 0;
-        background: rgba(250, 250, 248, 0.98);
-        backdrop-filter: blur(16px);
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 999;
+        background: var(--color-bg);
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        gap: 1.75rem;
+        gap: 2rem;
         transform: translateY(-100%);
         opacity: 0;
         visibility: hidden;
@@ -783,9 +786,16 @@ button { background: none; border: none; cursor: pointer; font-family: inherit; 
         visibility: visible;
     }
 
-    .nav-toggle { display: flex; }
+    .nav-toggle {
+        display: flex;
+        position: relative;
+        z-index: 1001;
+    }
 
-    .nav-link { font-size: 1.125rem; }
+    .nav-link {
+        font-size: 1.25rem;
+        color: var(--color-text);
+    }
 
     .nav-cards { grid-template-columns: 1fr; }
 
