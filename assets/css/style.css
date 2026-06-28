@@ -118,9 +118,20 @@ p, h1, h2, h3, h4, h5, h6 { overflow-wrap: break-word; }
 .logo:hover { opacity: 0.6; }
 
 .nav-menu {
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 1001;
     display: flex;
     gap: 2rem;
     align-items: center;
+    height: auto;
+    padding: 1.25rem var(--space-md);
+    transition: padding 0.4s var(--ease);
+}
+
+.header.scrolled ~ .nav-menu {
+    padding: 0.75rem var(--space-md);
 }
 
 .nav-link {
