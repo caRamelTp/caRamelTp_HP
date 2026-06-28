@@ -822,8 +822,9 @@ p, h1, h2, h3, h4, h5, h6 { overflow-wrap: break-word; }
         position: fixed;
         top: 0;
         left: 0;
-        right: 0;
-        bottom: 0;
+        width: 100vw;
+        height: 100vh;
+        height: 100dvh;
         z-index: 1001;
         background: var(--color-bg);
         display: flex;
@@ -831,6 +832,7 @@ p, h1, h2, h3, h4, h5, h6 { overflow-wrap: break-word; }
         align-items: center;
         justify-content: center;
         gap: 2rem;
+        padding: 0;
         opacity: 0;
         visibility: hidden;
         pointer-events: none;

@@ -39,27 +39,49 @@ function initMobileNav() {
 
     if (!toggle || !menu) return;
 
+    let savedScrollY = 0;
+
+    function openMenu() {
+        savedScrollY = window.scrollY;
+        menu.classList.add('active');
+        toggle.classList.add('active');
+        document.body.style.position = 'fixed';
+        document.body.style.top = `-${savedScrollY}px`;
+        document.body.style.left = '0';
+        document.body.style.right = '0';
+        document.body.style.overflow = 'hidden';
+    }
+
+    function closeMenu() {
+        menu.classList.remove('active');
+        toggle.classList.remove('active');
+        document.body.style.position = '';
+        document.body.style.top = '';
+        document.body.style.left = '';
+        document.body.style.right = '';
+        document.body.style.overflow = '';
+        window.scrollTo(0, savedScrollY);
+    }
+
     toggle.addEventListener('click', () => {
-        const isActive = menu.classList.toggle('active');
-        toggle.classList.toggle('active');
-        document.body.style.overflow = isActive ? 'hidden' : '';
+        if (menu.classList.contains('active')) {
+            closeMenu();
+        } else {
+            openMenu();
+        }
     });
 
     // Close when clicking a link
     menu.querySelectorAll('.nav-link').forEach(link => {
         link.addEventListener('click', () => {
-            menu.classList.remove('active');
-            toggle.classList.remove('active');
-            document.body.style.overflow = '';
+            closeMenu();
         });
     });
 
     // Close on outside click
     document.addEventListener('click', (e) => {
         if (!menu.contains(e.target) && !toggle.contains(e.target) && menu.classList.contains('active')) {
-            menu.classList.remove('active');
-            toggle.classList.remove('active');
-            document.body.style.overflow = '';
+            closeMenu();
         }
     });
 }
