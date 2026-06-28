@@ -16,7 +16,7 @@
     --color-text-muted: #9A9A9A;
     --color-accent: #C4956A;
     --color-accent-dark: #8B7355;
-    --color-border: rgba(0, 0, 0, 0.08);
+    --color-border: rgba(0, 0, 0, 0.12);
     --color-white: #FFFFFF;
 
     --font-en: 'Outfit', sans-serif;
@@ -40,7 +40,7 @@
    =================================== */
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
-html { scroll-behavior: smooth; }
+html { scroll-behavior: smooth; font-size: 16px; }
 
 body {
     font-family: var(--font-jp);
@@ -49,6 +49,7 @@ body {
     color: var(--color-text);
     line-height: 1.9;
     -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
     overflow-x: hidden;
 }
 
@@ -57,17 +58,21 @@ ul, ol { list-style: none; }
 img { max-width: 100%; height: auto; display: block; }
 svg { display: inline-block; vertical-align: middle; flex-shrink: 0; }
 button { background: none; border: none; cursor: pointer; font-family: inherit; }
+input, button, textarea, select { font: inherit; }
+p, h1, h2, h3, h4, h5, h6 { overflow-wrap: break-word; }
 
 /* ===================================
    Layout
    =================================== */
 .container {
+    width: 100%;
     max-width: var(--container-max);
     margin: 0 auto;
     padding: 0 var(--space-md);
 }
 
 .container--narrow {
+    width: 100%;
     max-width: var(--container-narrow);
     margin: 0 auto;
     padding: 0 var(--space-md);
@@ -106,6 +111,8 @@ button { background: none; border: none; cursor: pointer; font-family: inherit; 
     font-size: 1.375rem;
     font-weight: 600;
     letter-spacing: -0.02em;
+    position: relative;
+    z-index: 1002;
 }
 
 .logo:hover { opacity: 0.6; }
@@ -150,7 +157,8 @@ button { background: none; border: none; cursor: pointer; font-family: inherit; 
     flex-direction: column;
     gap: 5px;
     padding: 8px;
-    z-index: 1001;
+    position: relative;
+    z-index: 1002;
 }
 
 .nav-toggle span {
@@ -170,9 +178,11 @@ button { background: none; border: none; cursor: pointer; font-family: inherit; 
    Hero (index only)
    =================================== */
 .hero {
+    width: 100%;
     min-height: 100vh;
     min-height: 100svh;
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
     text-align: center;
@@ -190,7 +200,12 @@ button { background: none; border: none; cursor: pointer; font-family: inherit; 
     pointer-events: none;
 }
 
-.hero-content { position: relative; z-index: 1; }
+.hero-content {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    max-width: var(--container-max);
+}
 
 .hero-title {
     font-family: var(--font-en);
@@ -216,6 +231,7 @@ button { background: none; border: none; cursor: pointer; font-family: inherit; 
     display: flex;
     justify-content: center;
     gap: 0.75rem;
+    flex-wrap: wrap;
     animation: fadeUp 0.8s var(--ease-out) 0.3s forwards;
     opacity: 0;
 }
@@ -234,19 +250,13 @@ button { background: none; border: none; cursor: pointer; font-family: inherit; 
 .hero-scroll {
     position: absolute;
     bottom: 2.5rem;
-    left: 0;
-    right: 0;
+    width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 0.5rem;
-    animation: fadeScrollIn 0.8s var(--ease-out) 0.5s forwards;
     opacity: 0;
-}
-
-@keyframes fadeScrollIn {
-    from { opacity: 0; }
-    to { opacity: 1; }
+    animation: fadeIn 0.8s var(--ease-out) 0.5s forwards;
 }
 
 .hero-scroll span {
@@ -285,6 +295,11 @@ button { background: none; border: none; cursor: pointer; font-family: inherit; 
 @keyframes fadeUp {
     from { opacity: 0; transform: translateY(20px); }
     to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
 }
 
 /* ===================================
@@ -351,40 +366,40 @@ button { background: none; border: none; cursor: pointer; font-family: inherit; 
 }
 
 /* ===================================
-   Index: Navigation Cards
+   Portfolio Card (Instagram)
    =================================== */
-.nav-cards {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 1.25rem;
-}
-
-.nav-card {
-    display: block;
+.portfolio-card {
     background: var(--color-white);
     border: 1px solid var(--color-border);
     border-radius: var(--radius);
-    padding: 2rem 1.5rem;
-    text-align: center;
-    transition: all 0.3s var(--ease);
+    overflow: hidden;
+    margin-top: 1.5rem;
 }
 
-.nav-card:hover {
-    border-color: var(--color-accent);
-    transform: translateY(-3px);
-    box-shadow: 0 8px 24px rgba(0,0,0,0.06);
+.portfolio-card__media {
+    aspect-ratio: 16 / 9;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, #f5f0eb 0%, #ebe5de 100%);
 }
 
-.nav-card__title {
+.portfolio-card__body {
+    padding: 1.5rem;
+}
+
+.portfolio-card__title {
     font-family: var(--font-en);
     font-size: 1.125rem;
     font-weight: 500;
     margin-bottom: 0.375rem;
 }
 
-.nav-card__sub {
-    font-size: 0.8125rem;
+.portfolio-card__text {
+    font-size: 0.875rem;
     color: var(--color-text-light);
+    line-height: 1.8;
+    margin-bottom: 0.75rem;
 }
 
 /* ===================================
@@ -398,7 +413,7 @@ button { background: none; border: none; cursor: pointer; font-family: inherit; 
     margin-bottom: 1.25rem;
 }
 
-.pricing-section:last-child {
+.pricing-section:last-of-type {
     margin-bottom: 0;
 }
 
@@ -500,6 +515,7 @@ button { background: none; border: none; cursor: pointer; font-family: inherit; 
     border-radius: var(--radius);
     overflow: hidden;
     background: #000;
+    border: 1px solid var(--color-border);
 }
 
 .video-embed iframe {
@@ -515,9 +531,6 @@ button { background: none; border: none; cursor: pointer; font-family: inherit; 
    Contact Section
    =================================== */
 .contact-list {
-    display: flex;
-    flex-direction: column;
-    gap: 0;
     background: var(--color-white);
     border: 1px solid var(--color-border);
     border-radius: var(--radius);
@@ -777,42 +790,47 @@ button { background: none; border: none; cursor: pointer; font-family: inherit; 
         --space-xl: 4rem;
     }
 
+    /* Mobile Nav Overlay */
     .nav-menu {
         position: fixed;
         top: 0;
         left: 0;
-        right: 0;
-        bottom: 0;
-        z-index: 999;
+        width: 100%;
+        height: 100%;
+        z-index: 1001;
         background: var(--color-bg);
+        display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: center;
         gap: 2rem;
-        transform: translateY(-100%);
         opacity: 0;
         visibility: hidden;
-        transition: all 0.5s var(--ease-out);
+        transition: opacity 0.3s var(--ease), visibility 0.3s;
     }
 
     .nav-menu.active {
-        transform: translateY(0);
         opacity: 1;
         visibility: visible;
     }
 
     .nav-toggle {
         display: flex;
-        position: relative;
-        z-index: 1001;
     }
 
     .nav-link {
         font-size: 1.25rem;
+        font-weight: 500;
         color: var(--color-text);
     }
 
-    .nav-cards { grid-template-columns: 1fr; }
+    .nav-link::after {
+        display: none;
+    }
+
+    .container, .container--narrow {
+        padding: 0 1.25rem;
+    }
 
     .about-content {
         grid-template-columns: 1fr;
@@ -830,21 +848,53 @@ button { background: none; border: none; cursor: pointer; font-family: inherit; 
         gap: 0.25rem;
     }
 
-    .social-links {
-        flex-wrap: wrap;
+    .contact-list {
+        padding: 0.5rem 1.25rem;
     }
 
-    .container, .container--narrow {
-        padding: 0 1.25rem;
+    .pricing-section {
+        padding: 1.25rem;
     }
 
     .price-table td {
-        font-size: 0.875rem;
+        font-size: 0.8125rem;
+        padding: 0.625rem 0;
+    }
+
+    .price-table td:last-child {
+        padding-left: 0.5rem;
     }
 
     .footer-links {
         flex-direction: column;
         align-items: center;
         gap: 0.5rem;
+    }
+
+    .hero-title {
+        font-size: clamp(2.5rem, 12vw, 4rem);
+    }
+
+    .portfolio-card__body {
+        padding: 1.25rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .price-table td:first-child {
+        display: block;
+        padding-bottom: 0;
+    }
+
+    .price-table td:last-child {
+        display: block;
+        text-align: left;
+        padding-top: 0.25rem;
+        padding-left: 0;
+    }
+
+    .price-table tr {
+        display: block;
+        padding: 0.5rem 0;
     }
 }
