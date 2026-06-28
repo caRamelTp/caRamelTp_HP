@@ -811,8 +811,8 @@ p, h1, h2, h3, h4, h5, h6 { overflow-wrap: break-word; }
         position: fixed;
         top: 0;
         left: 0;
-        width: 100%;
-        height: 100%;
+        right: 0;
+        bottom: 0;
         z-index: 1001;
         background: var(--color-bg);
         display: flex;
@@ -822,12 +822,14 @@ p, h1, h2, h3, h4, h5, h6 { overflow-wrap: break-word; }
         gap: 2rem;
         opacity: 0;
         visibility: hidden;
+        pointer-events: none;
         transition: opacity 0.3s var(--ease), visibility 0.3s;
     }
 
     .nav-menu.active {
         opacity: 1;
         visibility: visible;
+        pointer-events: auto;
     }
 
     .nav-toggle {
@@ -891,8 +893,20 @@ p, h1, h2, h3, h4, h5, h6 { overflow-wrap: break-word; }
         font-size: clamp(2.5rem, 12vw, 4rem);
     }
 
-    .portfolio-card__body {
+    .embed-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .embed-card {
         padding: 1.25rem;
+    }
+
+    .instagram-embed {
+        max-width: 100%;
+    }
+
+    .instagram-embed iframe {
+        min-height: 400px;
     }
 }
 
