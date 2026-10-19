@@ -28,6 +28,21 @@ caRamel_HP/
 1. `index.html` をダブルクリックしてブラウザで開く
 2. または、フォルダごとWebサーバー（VS Code Live Serverなど）で配信
 
+## 2026年10月リニューアル（MIX依頼中心の構成）
+
+- **公開フォルダは `docs/`**（GitHub Pages）。ルートで編集したら `docs/` にもコピーしてください。
+- `index.html` に「実績 → 料金 → 音源の準備 → 依頼の流れ → テンプレート → クレジット/キャンセル → お問い合わせ」を集約。
+- `service.html` / `gallery.html` / `contact.html` / `instagram.html` はトップ（または photo.html）へのリダイレクト。
+
+### Mix Works（新着 / 再生数順）の更新
+- データ: `assets/data/mix-works.js`（自動生成）
+- 手動更新: `node scripts/update-mix-works.mjs`（ルートと `docs/` の両方に書き出します）
+- 自動更新: `.github/workflows/update-mix-works.yml` が毎日 03:00 JST に実行
+- 任意: リポジトリの Secrets に `YT_API_KEY`（YouTube Data API v3）を登録すると、より正確に取得できます
+
+### 料金・過去のご依頼者様の編集
+`index.html` の `<section id="price">` / `<div class="clients">` 内を編集
+
 ## コンテンツ編集
 
 ### ニュース更新
