@@ -1,8 +1,8 @@
 // 自動生成ファイル（scripts/update-mix-works.mjs）。手動編集しないでください。
 window.MIX_WORKS = {
-  "updatedAt": "2026-10-19T04:52:00.373Z",
+  "updatedAt": "2026-10-19T10:40:00.000Z",
   "playlistId": "PLBazqsiSyyIzC6DXES-f0s0yifo024Qll",
-  "total": 563,
+  "total": 550,
   "recent": [
     {
       "id": "URQRMkDA-FE",
@@ -63,59 +63,59 @@ window.MIX_WORKS = {
   ],
   "popular": [
     {
-      "id": "DzP0jXgOC4I",
-      "title": "hololive production COUNTDOWN LIVE 2023▷2024 -hololive side-",
-      "channel": "hololive ホロライブ - VTuber Group",
-      "views": 4700000,
-      "published": null
-    },
-    {
-      "id": "q-aa0FaofWo",
-      "title": "【ほぼMV風】推しの顔が良すぎて困る / 夢喰NEON",
-      "channel": "放課後NEON【夢喰NEON】",
-      "views": 1200000,
-      "published": null
-    },
-    {
-      "id": "wXeoRshiaco",
-      "title": "【LIVE VIDEO】コドクアソビ/夢喰NEON@幕張メッセ幕張イベントホール",
-      "channel": "放課後NEON【夢喰NEON】",
-      "views": 1100000,
-      "published": null
-    },
-    {
-      "id": "ClN96lOuK9w",
-      "title": "hololive production COUNTDOWN LIVE 2023▷2024 -HOLOSTARS side-【#ホロスターズカウントダウン2023】",
-      "channel": "holostars ホロスターズ - VTuber Group",
-      "views": 718000,
-      "published": null
-    },
-    {
-      "id": "SJ_4gVunMZM",
-      "title": "【LIVE VIDEO】夢喰NEON -2nd Anniversary LIVE-",
-      "channel": "放課後NEON【夢喰NEON】",
-      "views": 595000,
-      "published": null
-    },
-    {
-      "id": "HraA1d6u7Ws",
-      "title": "【LIVE VIDEO】NEON CITY/夢喰NEON@幕張メッセ幕張イベントホール",
-      "channel": "放課後NEON【夢喰NEON】",
-      "views": 395000,
-      "published": null
-    },
-    {
-      "id": "7sSSOtHwJ60",
-      "title": "【LIVE VIDEO】メモリア/夢喰NEON@幕張メッセ幕張イベントホール",
-      "channel": "放課後NEON【夢喰NEON】",
-      "views": 372000,
-      "published": null
-    },
-    {
       "id": "mTsFeE3cfeM",
-      "title": "[MV] Kawaii Raising Project/BADQN♡",
+      "title": "【MV】カワイイ育成計画/BADQN♡",
       "channel": "RINDO Entertainment",
       "views": 304000,
+      "published": null
+    },
+    {
+      "id": "JdsY70SpPZ0",
+      "title": "【Performance Video】ラブラブラブラ【Poltergeist】",
+      "channel": "ホローホログラム",
+      "views": 250000,
+      "published": null
+    },
+    {
+      "id": "tv7J5K4tXlI",
+      "title": "トキメキUNITED (＃らぶしっくver.)",
+      "channel": "Love Sick - Topic",
+      "views": 220000,
+      "published": null
+    },
+    {
+      "id": "pD6ddIB_VWM",
+      "title": "【LIVE VIDEO】カタルシス/Scapegoat",
+      "channel": "Scapegoat",
+      "views": 210000,
+      "published": null
+    },
+    {
+      "id": "LxT0__Que5c",
+      "title": "【Dance Performance】盲目ラブガネーゼ /Scapegoat",
+      "channel": "Scapegoat",
+      "views": 180000,
+      "published": null
+    },
+    {
+      "id": "Ret4Aos6zqs",
+      "title": "【Music video】くまっちゃうな【Poltergeist】",
+      "channel": "ホローホログラム",
+      "views": 170000,
+      "published": null
+    },
+    {
+      "id": "-3m12pPjNmY",
+      "title": "【ベアードアード】ツーンってしてたい！ / あまつば 【MV】",
+      "channel": "XP!A【クロスピア】",
+      "views": 160000,
+      "published": null
+    },
+    {
+      "id": "nJVy06_v_C0",
+      "title": "【ベアードアード】らぶみ〜べいべ！ / あまなめ 【MV】",
+      "channel": "XP!A【クロスピア】",
+      "views": 150000,
       "published": null
     }
   ]

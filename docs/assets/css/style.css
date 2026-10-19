@@ -1128,6 +1128,12 @@ p, h1, h2, h3, h4, h5, h6 { overflow-wrap: break-word; }
     border-radius: 999px;
 }
 
+.clients__list .clients__featured {
+    border-color: var(--color-accent);
+    color: var(--color-text);
+    font-weight: 600;
+}
+
 .clients__list .clients__more {
     background: transparent;
     border-color: transparent;
@@ -1168,12 +1174,55 @@ p, h1, h2, h3, h4, h5, h6 { overflow-wrap: break-word; }
 
 .spotify-details .spotify-embed { padding: 0 1.25rem 1.25rem; }
 
-/* Plan cards */
+/* Plan cards & pricing subgrid */
+.price-merits {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-top: 1rem;
+}
+
+.price-merits li {
+    font-size: 0.8125rem;
+    font-weight: 600;
+    color: var(--color-accent-dark);
+    background: var(--color-white);
+    border: 1px solid var(--color-accent);
+    padding: 0.3rem 0.85rem;
+    border-radius: 999px;
+}
+
+.plan-group-title {
+    font-size: 1rem;
+    font-weight: 600;
+    margin-bottom: 0.875rem;
+}
+
 .plan-grid {
     display: grid;
     grid-template-columns: repeat(4, minmax(0, 1fr));
     gap: 1rem;
     margin-bottom: 1.25rem;
+}
+
+.pricing-subgrid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.25rem;
+    margin-bottom: 1.25rem;
+}
+
+.pricing-subgrid .pricing-section {
+    margin-bottom: 0;
+}
+
+.price-note--highlight {
+    color: var(--color-text);
+    background: var(--color-bg);
+    border-left: 3px solid var(--color-accent);
+    padding: 0.65rem 0.9rem;
+    border-radius: 0 6px 6px 0;
+    margin-top: 1rem;
 }
 
 .plan-card {
@@ -1565,6 +1614,7 @@ section[id] { scroll-margin-top: 70px; }
 @media (max-width: 960px) {
     .works-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
     .plan-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    .pricing-subgrid { grid-template-columns: 1fr; }
     .quick-guide__list { grid-template-columns: repeat(3, minmax(0, 1fr)); }
 }
 
@@ -1574,6 +1624,9 @@ section[id] { scroll-margin-top: 70px; }
     .hero { padding-top: 80px; padding-bottom: 80px; }
     .hero-facts { grid-template-columns: repeat(2, minmax(0, 1fr)); max-width: 360px; }
     .hero-facts__num { font-size: 1.3rem; }
+
+    .clients { padding: 1.25rem; }
+    .clients__list li { font-size: 0.8125rem; padding: 0.3rem 0.75rem; }
 
     .photo-teaser { flex-direction: column; align-items: flex-start; }
     .photo-teaser__actions { align-items: flex-start; }

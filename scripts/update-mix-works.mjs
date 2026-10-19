@@ -150,9 +150,15 @@ async function fetchPublishDate(id) {
     }
 }
 
+// MIXとは異なる関わり方の作品（hololive / 夢喰NEON 等）はピックアップから除外
+const EXCLUDE_RE = /hololive|ホロライブ|holostars|ホロスターズ|夢喰NEON|放課後NEON|めだんし|Medansy/i;
+function isMixWork(v) {
+    return !EXCLUDE_RE.test(v.channel || '') && !EXCLUDE_RE.test(v.title || '');
+}
+
 async function fetchWithoutApi() {
-    const res = await fetch(`https://www.youtube.com/playlist?list=${PLAYLIST_ID}&hl=en&gl=US`, {
-        headers: { 'User-Agent': UA, 'Accept-Language': 'en-US,en' },
+    const res = await fetch(`https://www.youtube.com/playlist?list=${PLAYLIST_ID}&hl=ja&gl=JP`, {
+        headers: { 'User-Agent': UA, 'Accept-Language': 'ja-JP,ja' },
     });
     const html = await res.text();
     const dataMatch = html.match(/var ytInitialData = (\{.*?\});<\/script>/s);
@@ -171,7 +177,7 @@ async function fetchWithoutApi() {
             method: 'POST',
             headers: { 'Content-Type': 'application/json', 'User-Agent': UA },
             body: JSON.stringify({
-                context: { client: { clientName: 'WEB', clientVersion, hl: 'en', gl: 'US' } },
+                context: { client: { clientName: 'WEB', clientVersion, hl: 'ja', gl: 'JP' } },
                 continuation: token,
             }),
         });
@@ -188,7 +194,7 @@ async function fetchWithoutApi() {
     const unique = videos.filter(v => v.id && !seen.has(v.id) && seen.add(v.id));
 
     // 新着候補だけ正確な投稿日を取得
-    const candidates = [...unique].sort((a, b) => a.ageDays - b.ageDays).slice(0, KEEP * 2);
+    const candidates = [...unique].filter(isMixWork).sort((a, b) => a.ageDays - b.ageDays).slice(0, KEEP * 2);
     for (const v of candidates) {
         v.published = await fetchPublishDate(v.id);
     }
@@ -200,7 +206,8 @@ async function fetchWithoutApi() {
 // -----------------------------------
 async function main() {
     const key = process.env.YT_API_KEY;
-    const videos = key ? await fetchWithApi(key) : await fetchWithoutApi();
+    const allVideos = key ? await fetchWithApi(key) : await fetchWithoutApi();
+    const videos = allVideos.filter(isMixWork);
     if (!videos.length) throw new Error('動画が取得できませんでした');
 
     const strip = ({ id, title, channel, views, published }) => ({ id, title, channel, views, published: published || null });
