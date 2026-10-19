@@ -4,14 +4,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>caRamel# — Mixing / Vocal / Photo</title>
-    <meta name="description" content="caRamel# 公式サイト。Mix依頼・ライブ撮影・ポートレート撮影を承っています。料金プランとポートフォリオをご覧ください。">
+    <title>caRamel# — 歌ってみた・オリジナル曲のMIX依頼 | MIX歴7年</title>
+    <meta name="description" content="MIX師 caRamel#（キャラメル）の公式サイト。MIX歴7年・オールラウンド対応（EDM好き）。Shorts ¥3,000〜、全メニューにピッチ・タイミング補正込み。実績・料金・依頼の流れをまとめています。">
 
     <!-- OGP -->
-    <meta property="og:title" content="caRamel# — Mixing / Vocal / Photo">
-    <meta property="og:description" content="caRamel# 公式サイト。Mix依頼・撮影依頼を承っています。">
+    <meta property="og:title" content="caRamel# — MIX依頼受付中 | MIX歴7年">
+    <meta property="og:description" content="歌ってみた・オリジナル曲のMIXを承ります。Shorts ¥3,000〜 / ピッチ・タイミング補正込み。">
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="caRamel#">
+    <meta property="og:image" content="assets/images/ogp.jpg">
+    <meta name="twitter:card" content="summary_large_image">
 
     <!-- Favicon -->
     <link rel="icon" href="assets/images/favicon.ico" type="image/x-icon">
@@ -25,7 +27,7 @@
     <header class="header" id="header">
         <div class="container">
             <a href="index.html" class="logo">caRamel#</a>
-            <button class="nav-toggle" id="nav-toggle" aria-label="メニュー">
+            <button class="nav-toggle" id="nav-toggle" aria-label="メニュー" aria-controls="nav-menu" aria-expanded="false">
                 <span></span>
                 <span></span>
                 <span></span>
@@ -33,250 +35,438 @@
         </div>
     </header>
 
-    <!-- Mobile Nav Overlay (outside header to avoid backdrop-filter containing block) -->
-    <nav class="nav-menu" id="nav-menu">
-        <a href="#portfolio" class="nav-link">Portfolio</a>
-        <a href="#service" class="nav-link">Service</a>
-        <a href="#contact" class="nav-link">Contact</a>
-        <a href="#about" class="nav-link">About</a>
+    <!-- Nav (outside header to avoid backdrop-filter containing block) -->
+    <nav class="nav-menu" id="nav-menu" aria-label="メインメニュー">
+        <a href="#works" class="nav-link">実績</a>
+        <a href="#price" class="nav-link">料金</a>
+        <a href="#prepare" class="nav-link">音源の準備</a>
+        <a href="#flow" class="nav-link">依頼の流れ</a>
+        <a href="#contact" class="nav-link">お問い合わせ</a>
+        <a href="photo.html" class="nav-link nav-link--sub">Photo</a>
+        <a href="https://x.com/caRamelTp_nico" target="_blank" rel="noopener noreferrer" class="nav-cta">依頼する</a>
     </nav>
 
-    <!-- Hero -->
-    <section class="hero" id="hero">
-        <div class="hero-content">
-            <h1 class="hero-title">caRamel#</h1>
-            <p class="hero-subtitle">あなたの音楽を、最高のサウンドに。</p>
-            <div class="hero-tags">
-                <span class="hero-tag">Mixing</span>
-                <span class="hero-tag">Vocal</span>
-                <span class="hero-tag">Photo</span>
-            </div>
-        </div>
-        <div class="hero-scroll">
-            <span>Scroll</span>
-            <div class="hero-scroll-line"></div>
-        </div>
-    </section>
+    <main>
+        <!-- ============ Hero ============ -->
+        <section class="hero" id="hero">
+            <div class="hero-content">
+                <p class="hero-eyebrow">Mix Engineer</p>
+                <h1 class="hero-title">caRamel#</h1>
+                <p class="hero-subtitle">歌ってみた・オリジナル曲の<br class="sp-only">MIXを承ります。</p>
 
-    <!-- Portfolio -->
-    <section class="section" id="portfolio">
-        <div class="container">
-            <div class="section-header fade-in">
-                <span class="section-label">Portfolio</span>
-                <h2 class="section-title">Works</h2>
-                <p class="section-desc">これまで担当させていただいた作品の一部をご紹介します。</p>
-            </div>
+                <ul class="hero-facts">
+                    <li><span class="hero-facts__num">7<small>年</small></span><span class="hero-facts__label">MIX歴</span></li>
+                    <li><span class="hero-facts__num" data-works-total>500<small>+</small></span><span class="hero-facts__label">MIX実績</span></li>
+                    <li><span class="hero-facts__num"><small>¥</small>3,000<small>〜</small></span><span class="hero-facts__label">Shortsサイズ</span></li>
+                    <li><span class="hero-facts__num">約1<small>週間</small></span><span class="hero-facts__label">通常納期</span></li>
+                </ul>
 
-            <!-- YouTube + Spotify Grid -->
-            <div class="embed-grid fade-in">
-                <div class="embed-card">
-                    <h3 class="embed-card__title">Mix Works</h3>
-                    <div class="video-embed">
-                        <iframe
-                            src="https://www.youtube.com/embed/videoseries?list=PLBazqsiSyyIzC6DXES-f0s0yifo024Qll&rel=0"
-                            title="caRamel# Mix Portfolio"
-                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
-                        </iframe>
-                    </div>
-                    <p class="embed-card__link">
-                        <a href="https://www.youtube.com/playlist?list=PLBazqsiSyyIzC6DXES-f0s0yifo024Qll"
-                           target="_blank" rel="noopener noreferrer" class="text-link">YouTubeで全て見る →</a>
-                    </p>
+                <div class="hero-actions">
+                    <a href="#works" class="cta-link">実績を聴く</a>
+                    <a href="#price" class="cta-link cta-link--outline">料金を見る</a>
+                </div>
+            </div>
+            <div class="hero-scroll" aria-hidden="true">
+                <span>Scroll</span>
+                <div class="hero-scroll-line"></div>
+            </div>
+        </section>
+
+        <!-- ============ Quick Guide ============ -->
+        <nav class="quick-guide" aria-label="ページ内ガイド">
+            <div class="container">
+                <p class="quick-guide__title">ご依頼をご検討中の方へ — 知りたい項目へジャンプ</p>
+                <ol class="quick-guide__list">
+                    <li><a href="#works"><span>01</span>実績を聴く</a></li>
+                    <li><a href="#price"><span>02</span>料金・納期</a></li>
+                    <li><a href="#prepare"><span>03</span>音源の準備</a></li>
+                    <li><a href="#flow"><span>04</span>依頼の流れ</a></li>
+                    <li><a href="#template"><span>05</span>依頼テンプレート</a></li>
+                    <li><a href="#policy"><span>06</span>クレジット・キャンセル</a></li>
+                </ol>
+            </div>
+        </nav>
+
+        <!-- ============ Works ============ -->
+        <section class="section" id="works">
+            <div class="container">
+                <div class="section-header fade-in">
+                    <span class="section-label">Mix Works</span>
+                    <h2 class="section-title">MIX実績</h2>
+                    <p class="section-desc">オールラウンドに対応。中でもEDMなど、エレクトロ系のサウンドが大好きです。<br>最新の担当作品と、再生数の多い作品をピックアップしています。</p>
                 </div>
 
-                <div class="embed-card">
-                    <h3 class="embed-card__title">Spotify Playlist</h3>
+                <div class="works-tabs fade-in" role="tablist" aria-label="実績の並び順">
+                    <button class="works-tab is-active" role="tab" aria-selected="true" data-works-tab="recent">新着</button>
+                    <button class="works-tab" role="tab" aria-selected="false" data-works-tab="popular">再生数順</button>
+                </div>
+
+                <div class="works-grid fade-in" id="works-grid" aria-live="polite">
+                    <!-- assets/js/main.js が assets/data/mix-works.js から描画 -->
+                </div>
+
+                <!-- データが読み込めない場合のフォールバック -->
+                <div class="video-embed works-fallback" id="works-fallback" hidden>
+                    <iframe
+                        src="https://www.youtube-nocookie.com/embed/videoseries?list=PLBazqsiSyyIzC6DXES-f0s0yifo024Qll&rel=0"
+                        title="caRamel# Mix Portfolio"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        referrerpolicy="strict-origin-when-cross-origin" loading="lazy" allowfullscreen>
+                    </iframe>
+                </div>
+
+                <p class="works-more fade-in">
+                    <a href="https://www.youtube.com/playlist?list=PLBazqsiSyyIzC6DXES-f0s0yifo024Qll"
+                       target="_blank" rel="noopener noreferrer" class="text-link">YouTubeプレイリストで全ての実績を見る →</a>
+                </p>
+
+                <!-- Clients -->
+                <div class="clients fade-in">
+                    <h3 class="sub-title">過去のご依頼者様（一部・敬称略）</h3>
+                    <ul class="clients__list">
+                        <li>RINDO Entertainment</li>
+                        <li>ささかまリス子</li>
+                        <li>安藤紗々</li>
+                        <li>いりぽん先生</li>
+                        <li>松下玲緒菜</li>
+                        <li class="clients__more">and more…</li>
+                    </ul>
+                </div>
+
+                <!-- Spotify -->
+                <details class="spotify-details fade-in">
+                    <summary>Spotifyのプレイリストで聴く</summary>
                     <div class="spotify-embed">
                         <iframe
                             src="https://open.spotify.com/embed/playlist/7ej3bNOYC36cLXYZYKJT5b?utm_source=generator&theme=0"
                             width="100%" height="352" frameborder="0"
                             allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
-                            loading="lazy" style="border-radius: 10px;">
-                        </iframe>
+                            loading="lazy" title="caRamel# Spotify Playlist"></iframe>
                     </div>
-                    <p class="embed-card__link">
-                        <a href="https://open.spotify.com/playlist/7ej3bNOYC36cLXYZYKJT5b"
-                           target="_blank" rel="noopener noreferrer" class="text-link">Spotifyで聴く →</a>
-                    </p>
+                </details>
+            </div>
+        </section>
+
+        <!-- ============ Price ============ -->
+        <section class="section section--alt" id="price">
+            <div class="container">
+                <div class="section-header fade-in">
+                    <span class="section-label">Price</span>
+                    <h2 class="section-title">料金・納期</h2>
+                    <p class="section-desc">表示はすべて<strong>税込</strong>です。<strong>全メニューにピッチ・タイミング補正が含まれます。</strong></p>
+                </div>
+
+                <div class="plan-grid fade-in">
+                    <div class="plan-card">
+                        <p class="plan-card__name">Shorts サイズ</p>
+                        <p class="plan-card__price"><small>¥</small>3,000</p>
+                        <p class="plan-card__meta">通常納期 約1週間</p>
+                    </div>
+                    <div class="plan-card">
+                        <p class="plan-card__name">ワンコーラス</p>
+                        <p class="plan-card__price"><small>¥</small>4,000</p>
+                        <p class="plan-card__meta">通常納期 約1週間</p>
+                    </div>
+                    <div class="plan-card plan-card--featured">
+                        <span class="plan-card__badge">定番</span>
+                        <p class="plan-card__name">フルコーラス</p>
+                        <p class="plan-card__price"><small>¥</small>8,000</p>
+                        <p class="plan-card__meta">通常納期 約1週間</p>
+                    </div>
+                    <div class="plan-card">
+                        <p class="plan-card__name">コラボ（2名）</p>
+                        <p class="plan-card__price"><small>¥</small>14,000</p>
+                        <p class="plan-card__meta">通常納期 約2週間</p>
+                    </div>
+                </div>
+
+                <div class="pricing-section fade-in">
+                    <h3>オプション</h3>
+                    <table class="price-table">
+                        <tr><td>コラボ 1名追加につき</td><td>+¥3,000</td></tr>
+                        <tr><td>エンコード<span class="price-table__note">ご依頼いただいた場合に限ります</span></td><td>¥0</td></tr>
+                        <tr><td>エンコード後の修正</td><td>+¥1,500〜</td></tr>
+                    </table>
+                    <p class="price-note">※ お見積り時の内容（リテイクの有無・音質・歌唱・トラック数など）によっては、オプション料金をいただく場合がございます。</p>
+                </div>
+
+                <div class="cta-block fade-in">
+                    <p>「この内容だといくら？」など、お見積りだけのご相談も歓迎です</p>
+                    <a href="https://x.com/caRamelTp_nico" target="_blank" rel="noopener noreferrer" class="cta-link">X（旧Twitter）のDMで相談する</a>
                 </div>
             </div>
+        </section>
 
-            <!-- Photo Works (Instagram) -->
-            <div class="fade-in" style="margin-top: var(--space-md);">
-                <h3 class="embed-card__title">Photo Works</h3>
-                <p style="font-size: 0.875rem; color: var(--color-text-light); margin-bottom: 1rem;">
-                    ライブ撮影・ポートレートを中心に、関東エリアで撮影活動をしています。
-                </p>
-                <div class="instagram-embed">
-                    <iframe
-                        src="https://www.instagram.com/carameltp_cam/embed/"
-                        title="caRamel# Instagram"
-                        frameborder="0" scrolling="no"
-                        loading="lazy">
-                    </iframe>
+        <!-- ============ Prepare ============ -->
+        <section class="section" id="prepare">
+            <div class="container--narrow">
+                <div class="section-header fade-in">
+                    <span class="section-label">Before You Send</span>
+                    <h2 class="section-title">音源の準備・送り方</h2>
+                    <p class="section-desc">スムーズに作業を始めるためのお願いです。分からない点はお気軽にご相談ください。</p>
                 </div>
-                <p style="margin-top: 0.75rem;">
-                    <a href="https://www.instagram.com/carameltp_cam/" target="_blank" rel="noopener noreferrer"
-                       class="text-link">Instagramで全て見る →</a>
-                </p>
-            </div>
 
-            <div class="cta-block fade-in">
-                <p>作品をご覧になって気になった方は</p>
-                <a href="https://x.com/caRamelTp_nico" target="_blank" rel="noopener noreferrer"
-                   class="cta-link">DMで依頼する</a>
-            </div>
-        </div>
-    </section>
-
-    <!-- Service / Pricing -->
-    <section class="section section--alt" id="service">
-        <div class="container">
-            <div class="section-header fade-in">
-                <span class="section-label">Service & Price</span>
-                <h2 class="section-title">料金プラン</h2>
-                <p class="section-desc">Mix依頼・撮影依頼の料金一覧です。お気軽にご相談ください。</p>
-            </div>
-
-            <!-- Mix Pricing -->
-            <div class="pricing-section fade-in">
-                <h3>Mix / Mastering</h3>
-                <table class="price-table">
-                    <tr><td>基本プラン（フルコーラス / 10trまで）</td><td>¥8,000</td></tr>
-                    <tr><td>ワンコーラス（5trまで）</td><td>¥4,000</td></tr>
-                    <tr><td>Short動画用（5trまで）</td><td>¥3,000</td></tr>
-                    <tr><td>マスタリングのみ</td><td>¥2,000</td></tr>
-                    <tr><td>パラミックス</td><td>¥13,000</td></tr>
-                </table>
-            </div>
-
-            <!-- Options -->
-            <div class="pricing-section fade-in">
-                <h3>オプション</h3>
-                <table class="price-table">
-                    <tr><td>コラボ（1人追加ごと）</td><td>+¥3,000</td></tr>
-                    <tr><td>追加トラック（上限超過分 / 1本）</td><td>+¥1,000</td></tr>
-                    <tr><td>ピッチ・タイミング補正（ワンコーラス）</td><td>¥3,000</td></tr>
-                    <tr><td>ピッチ・タイミング補正（フルコーラス）</td><td>¥6,000</td></tr>
-                    <tr><td>歌唱リテイク（依頼者都合 / 1tr）</td><td>+¥1,000</td></tr>
-                    <tr><td>動画エンコード</td><td>無料</td></tr>
-                </table>
-                <p class="price-note">※ Mixリテイクは何度でも無料です。最高なものを一緒に作りましょう！</p>
-            </div>
-
-            <!-- Live音源 -->
-            <div class="pricing-section fade-in">
-                <h3>Live用音源作成</h3>
-                <table class="price-table">
-                    <tr><td>リテイク（過去にcaRamel#がMixした楽曲）</td><td>¥3,500〜</td></tr>
-                    <tr><td>新規作成（フルコーラス）</td><td>¥7,000〜</td></tr>
-                    <tr><td>新規作成（ワンコーラス）</td><td>¥3,500〜</td></tr>
-                </table>
-            </div>
-
-            <!-- Photo Pricing -->
-            <div class="pricing-section fade-in">
-                <h3>Photo / Video</h3>
-                <table class="price-table">
-                    <tr><td>ライブ撮影（個人依頼）</td><td>¥7,000 +交通費</td></tr>
-                    <tr><td>ライブ撮影・全体（片部）</td><td>¥15,000</td></tr>
-                    <tr><td>ライブ撮影・全体（両部）</td><td>¥20,000</td></tr>
-                    <tr><td>映像（定点）1曲あたり</td><td>¥500</td></tr>
-                    <tr><td>全体の動画のみ（片部）</td><td>¥15,000</td></tr>
-                    <tr><td>全体の動画のみ（両部）</td><td>¥20,000</td></tr>
-                    <tr><td>キャンセル料（2週間以内）</td><td>50%</td></tr>
-                    <tr><td>キャンセル料（1週間以内）</td><td>100%</td></tr>
-                </table>
-                <p class="price-note">
-                    ※ 個人依頼の場合は主催者様に許可が必要です<br>
-                    ※ 関東以外の遠征撮影も承っております（例：大阪府内 ¥30,000 交通費含む）<br>
-                    ※ 機材の関係で写真または動画どちらかのご依頼となります
-                </p>
-            </div>
-
-            <div class="fade-in" style="margin-top: var(--space-md);">
-                <a href="service.html" class="text-link">依頼方法・注意事項・支払い方法の詳細 →</a>
-            </div>
-
-            <div class="cta-block fade-in">
-                <p>料金・内容のご相談はお気軽に</p>
-                <a href="https://x.com/caRamelTp_nico" target="_blank" rel="noopener noreferrer"
-                   class="cta-link">DMで相談する</a>
-            </div>
-        </div>
-    </section>
-
-    <!-- Contact -->
-    <section class="section" id="contact">
-        <div class="container--narrow">
-            <div class="section-header fade-in">
-                <span class="section-label">Contact</span>
-                <h2 class="section-title">ご依頼・お問い合わせ</h2>
-                <p class="section-desc">お仕事のご依頼・ご相談は下記よりお気軽にご連絡ください。</p>
-            </div>
-
-            <div class="contact-list fade-in">
-                <div class="contact-item">
-                    <span class="contact-item__label">X (Twitter)</span>
-                    <span class="contact-item__value">
-                        <a href="https://x.com/caRamelTp_nico" target="_blank" rel="noopener noreferrer">@caRamelTp_nico</a>
-                    </span>
+                <!-- 音質 -->
+                <div class="info-card fade-in">
+                    <h3>音質について</h3>
+                    <div class="callout callout--ok">
+                        <p class="callout__title">多少のノイズはOKです</p>
+                        <p>うっすら「サー」っといったホワイトノイズ等が入っていても問題ありません。<br>
+                        その代わり、<strong>歌っていない環境音だけの箇所も切り取らずに</strong>お送りください。ノイズをプラグインに学習させて、綺麗にノイズ除去を行うためです。</p>
+                    </div>
+                    <div class="callout">
+                        <p class="callout__title">音割れ（クリップ）も修復できる場合があります</p>
+                        <p>声を張り上げている箇所など、一部がクリップしていても修復可能な場合がございます。<br>
+                        リテイクしていただくのがベストですが、リテイクが難しい場合や、歌い方が気に入っていてどうしても使ってほしい場合はご相談ください！</p>
+                    </div>
                 </div>
-                <div class="contact-item">
-                    <span class="contact-item__label">Email</span>
-                    <span class="contact-item__value">
-                        <a href="mailto:carameltp.nico@gmail.com">carameltp.nico@gmail.com</a>
-                    </span>
-                </div>
-                <div class="contact-item">
-                    <span class="contact-item__label">Discord</span>
-                    <span class="contact-item__value">carameltp_nico</span>
+
+                <!-- 送り方 -->
+                <div class="info-card fade-in">
+                    <h3>音源の書き出し・送り方チェックリスト</h3>
+                    <ol class="checklist">
+                        <li>
+                            <p class="checklist__head">zipファイルにまとめて、アップローダーで送る</p>
+                            <p><a href="https://gigafile.nu/" target="_blank" rel="noopener noreferrer" class="text-link">ギガファイル便</a> 等のアップローダーをご利用ください。</p>
+                        </li>
+                        <li>
+                            <p class="checklist__head">zipのファイル名は「曲名_お名前」に</p>
+                            <p>こちらで管理しやすくなります。<span class="example">例：<code>曲名_caRamel</code></span></p>
+                        </li>
+                        <li>
+                            <p class="checklist__head">ボーカルは<strong>モノラル</strong>で書き出す</p>
+                            <p>ステレオではなくモノラルでお願いします。分からない場合はこちらで変換いたします。</p>
+                        </li>
+                        <li>
+                            <p class="checklist__head">重なっている部分は別トラックに分ける</p>
+                            <p>ハモリ等、同時に鳴っている部分はトラックを分けて書き出してください。<span class="example">例：Studio One の場合「Stemで書き出し」</span></p>
+                        </li>
+                        <li>
+                            <p class="checklist__head">頭出しをしておく</p>
+                            <p>全トラックの開始位置をそろえていただけると幸いです。</p>
+                        </li>
+                        <li>
+                            <p class="checklist__head">BPMは書き込まない</p>
+                            <p>音源ファイルにBPM（テンポ情報）を書き込まないでください。<span class="example">例：Studio One の場合「テンポをオーディオファイルに書き込み」のチェックを外す</span></p>
+                        </li>
+                        <li>
+                            <p class="checklist__head">ファイル名は<strong>半角英数字</strong>で分かりやすく</p>
+                            <p>音源の確認がスムーズになります。<span class="example">例：<code>main-1</code> <code>main-2</code> <code>hamo-1</code> <code>oct low-1</code></span></p>
+                            <p class="checklist__warn">※ 半角英数字でない場合、Macからファイルを送っていただく際に文字化けします。</p>
+                        </li>
+                    </ol>
+                    <p class="info-card__footer">ご協力よろしくお願いいたします！</p>
                 </div>
             </div>
+        </section>
 
-            <div class="social-links fade-in">
-                <a href="https://youtube.com/" target="_blank" rel="noopener noreferrer" class="social-link">YouTube</a>
-                <a href="https://x.com/caRamelTp_nico" target="_blank" rel="noopener noreferrer" class="social-link">X</a>
-                <a href="https://www.instagram.com/carameltp_cam/" target="_blank" rel="noopener noreferrer" class="social-link">Instagram</a>
-                <a href="https://tiktok.com/" target="_blank" rel="noopener noreferrer" class="social-link">TikTok</a>
-            </div>
-
-            <p class="fade-in" style="font-size: 0.8125rem; color: var(--color-text-muted); margin-top: 1.5rem;">
-                <a href="https://www.amazon.jp/hz/wishlist/ls/20TH7BMLTU16V?ref_=wl_share"
-                   target="_blank" rel="noopener noreferrer" class="text-link">Amazon ほしい物リスト</a>
-            </p>
-        </div>
-    </section>
-
-    <!-- About -->
-    <section class="section section--alt" id="about">
-        <div class="container--narrow">
-            <div class="section-header fade-in">
-                <span class="section-label">About</span>
-                <h2 class="section-title">Profile</h2>
-            </div>
-
-            <div class="about-content fade-in">
-                <div class="about-image">
-                    <img src="assets/images/profile.jpg" alt="caRamel#">
+        <!-- ============ Flow ============ -->
+        <section class="section section--alt" id="flow">
+            <div class="container--narrow">
+                <div class="section-header fade-in">
+                    <span class="section-label">Flow</span>
+                    <h2 class="section-title">ご依頼の流れ</h2>
+                    <p class="section-desc">X（旧Twitter）のDMにテンプレートを送っていただくところからスタートです。</p>
                 </div>
-                <div>
-                    <h3 class="about-name">caRamel#</h3>
-                    <p class="about-role">キャラメル / 所属: #TRIFRONTIER</p>
-                    <p class="about-text">
-                        Mixing / Vocal / Photo を中心に活動するクリエイター。
-                        歌ってみたからオリジナル曲まで、ボーカルを最大限に活かしたサウンドメイキングを得意としています。
-                    </p>
+
+                <ol class="steps fade-in">
+                    <li class="step">
+                        <p class="step__title">依頼テンプレートを送る</p>
+                        <p>下の<a href="#template" class="text-link">依頼用テンプレート</a>に記入し、素材URLと一緒に <a href="https://x.com/caRamelTp_nico" target="_blank" rel="noopener noreferrer" class="text-link">X のDM</a> でお送りください。</p>
+                    </li>
+                    <li class="step">
+                        <p class="step__title">音源確認・お見積り</p>
+                        <p>音源を確認し、問題なければ正式なお見積りをお出しします。お見積りにご納得いただけたら、お支払先をお送りします。</p>
+                        <p class="step__note">※ 一部リテイクや音質・歌唱・トラック数によって料金が変動する可能性がございます。</p>
+                    </li>
+                    <li class="step">
+                        <p class="step__title">お支払い（先払い）</p>
+                        <p>原則<strong>先払い・銀行振込</strong>でお願いしております。<strong>法人様のみ請求書払い</strong>に対応可能です。</p>
+                        <p class="step__note">※ お支払い後の返金は原則いたしかねます。ご了承ください。</p>
+                    </li>
+                    <li class="step">
+                        <p class="step__title">MIX・納品</p>
+                        <p>MIXが完成しましたら音源を納品いたします。修正がある場合は遠慮なくお申し付けください！</p>
+                    </li>
+                    <li class="step">
+                        <p class="step__title">納品完了</p>
+                        <p>修正がなければ、お渡しした最終データで納品完了となります。エンコードが必要な場合はエンコードいたします。</p>
+                        <p class="step__note">※ エンコード後の修正は +¥1,500〜 頂戴いたします。</p>
+                    </li>
+                    <li class="step">
+                        <p class="step__title">投稿・拡散</p>
+                        <p>投稿後、微力ながら拡散させていただきます！ Xに投稿される場合、<a href="https://x.com/caRamelTp_nico" target="_blank" rel="noopener noreferrer" class="text-link">@caRamelTp_nico</a> を貼っていただければ、気付き次第拡散（実績公開）いたします。</p>
+                        <p class="step__note">※ 通知が来ない表記の場合は気付けないことがあります。</p>
+                    </li>
+                </ol>
+
+                <!-- Template -->
+                <div class="copy-box fade-in" id="template">
+                    <div class="copy-box__head">
+                        <h3>依頼用テンプレート</h3>
+                        <button type="button" class="copy-btn" data-copy-target="#template-text">コピー</button>
+                    </div>
+<pre class="copy-box__body" id="template-text">○曲名：
+○本家様のURL：
+○キー変更がある場合は歌ったキー：
+○投稿サイト：
+○依頼内容：
+○納期希望（要相談）：
+○エンコード 要／否：
+○その他なにかあれば：
+○X以外のご連絡先（任意）：
+○素材URL：</pre>
+                    <p class="copy-box__foot">コピーして X のDMに貼り付け、各項目をご記入ください。</p>
+                </div>
+
+                <div class="cta-block fade-in">
+                    <p>テンプレートの準備ができたら</p>
+                    <a href="https://x.com/caRamelTp_nico" target="_blank" rel="noopener noreferrer" class="cta-link">X（旧Twitter）のDMで依頼する</a>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
+
+        <!-- ============ Policy ============ -->
+        <section class="section" id="policy">
+            <div class="container--narrow">
+                <div class="section-header fade-in">
+                    <span class="section-label">Policy</span>
+                    <h2 class="section-title">クレジット表記・キャンセル</h2>
+                </div>
+
+                <!-- Credit -->
+                <div class="copy-box fade-in" id="credit">
+                    <div class="copy-box__head">
+                        <h3>クレジット表記のお願い</h3>
+                        <button type="button" class="copy-btn" data-copy-target="#credit-text">コピー</button>
+                    </div>
+<pre class="copy-box__body" id="credit-text">mix,mst：caRamel#
+X：https://x.com/caRamelTp_nico</pre>
+                    <dl class="credit-links">
+                        <div>
+                            <dt><span class="tag tag--required">必須</span>X（旧Twitter）</dt>
+                            <dd><a href="https://x.com/caRamelTp_nico" target="_blank" rel="noopener noreferrer" class="text-link">https://x.com/caRamelTp_nico</a></dd>
+                        </div>
+                        <div>
+                            <dt><span class="tag">任意</span>YouTube</dt>
+                            <dd><a href="https://www.youtube.com/@caRamelTp_nico" target="_blank" rel="noopener noreferrer" class="text-link">https://www.youtube.com/@caRamelTp_nico</a></dd>
+                        </div>
+                    </dl>
+                </div>
+
+                <!-- Cancel -->
+                <div class="info-card fade-in">
+                    <h3>キャンセルについて</h3>
+                    <ul class="info-list">
+                        <li>ご依頼受注確定後、かつお支払い後にキャンセルされる場合は、こちら側に非がある場合を除き<strong>返金はいたしかねます</strong>。</li>
+                        <li>納品後にクオリティーにご納得いただけない場合も、作業料として頂戴するため返金不可です。</li>
+                        <li>理不尽なキャンセルやイタズラ等をされた場合は、今後一切のご依頼をお断りする場合がございます。</li>
+                    </ul>
+                    <p class="info-card__footer">ご了承ください。</p>
+                </div>
+
+                <div class="info-card fade-in">
+                    <h3>企業様・事務所所属の方へ</h3>
+                    <p class="info-card__text">予算や詳細をおまとめの上ご相談ください。法人様は請求書払いにも対応しております。</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============ Contact ============ -->
+        <section class="section section--alt" id="contact">
+            <div class="container--narrow">
+                <div class="section-header fade-in">
+                    <span class="section-label">Contact</span>
+                    <h2 class="section-title">ご依頼・お問い合わせ</h2>
+                    <p class="section-desc">ご依頼は <strong>X（旧Twitter）のDM</strong> が一番スムーズです。メール・Discordでも受け付けています。</p>
+                </div>
+
+                <div class="contact-main fade-in">
+                    <a href="https://x.com/caRamelTp_nico" target="_blank" rel="noopener noreferrer" class="cta-link cta-link--lg">X のDMで依頼する（@caRamelTp_nico）</a>
+                </div>
+
+                <div class="contact-list fade-in">
+                    <div class="contact-item">
+                        <span class="contact-item__label">X (Twitter)</span>
+                        <span class="contact-item__value">
+                            <a href="https://x.com/caRamelTp_nico" target="_blank" rel="noopener noreferrer">@caRamelTp_nico</a>
+                        </span>
+                    </div>
+                    <div class="contact-item">
+                        <span class="contact-item__label">Email</span>
+                        <span class="contact-item__value">
+                            <a href="mailto:carameltp.nico@gmail.com">carameltp.nico@gmail.com</a>
+                        </span>
+                    </div>
+                    <div class="contact-item">
+                        <span class="contact-item__label">Discord</span>
+                        <span class="contact-item__value">carameltp_nico</span>
+                    </div>
+                </div>
+
+                <div class="social-links fade-in">
+                    <a href="https://www.youtube.com/@caRamelTp_nico" target="_blank" rel="noopener noreferrer" class="social-link">YouTube</a>
+                    <a href="https://x.com/caRamelTp_nico" target="_blank" rel="noopener noreferrer" class="social-link">X</a>
+                    <a href="https://www.instagram.com/carameltp_cam/" target="_blank" rel="noopener noreferrer" class="social-link">Instagram (Photo)</a>
+                    <a href="https://www.amazon.jp/hz/wishlist/ls/20TH7BMLTU16V?ref_=wl_share" target="_blank" rel="noopener noreferrer" class="social-link">Amazon ほしい物リスト</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============ About ============ -->
+        <section class="section" id="about">
+            <div class="container--narrow">
+                <div class="section-header fade-in">
+                    <span class="section-label">About</span>
+                    <h2 class="section-title">Profile</h2>
+                </div>
+
+                <div class="about-content fade-in">
+                    <div class="about-image">
+                        <img src="assets/images/profile.jpg" alt="caRamel#" loading="lazy">
+                    </div>
+                    <div>
+                        <h3 class="about-name">caRamel#</h3>
+                        <p class="about-role">キャラメル / MIX師 / 所属: #TRIFRONTIER</p>
+                        <dl class="about-spec">
+                            <div><dt>MIX歴</dt><dd>7年</dd></div>
+                            <div><dt>得意分野</dt><dd>オールラウンド（EDMが好き）</dd></div>
+                            <div><dt>対応</dt><dd>歌ってみた / オリジナル曲 / コラボ / Shorts</dd></div>
+                        </dl>
+                        <p class="about-text">
+                            歌ってみたからオリジナル曲まで、ボーカルを最大限に活かしたサウンドメイキングを心がけています。
+                            最高の一曲を一緒に作りましょう！
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============ Photo (sub) ============ -->
+        <section class="section section--alt section--compact" id="photo">
+            <div class="container--narrow">
+                <div class="photo-teaser fade-in">
+                    <div>
+                        <span class="section-label">Also</span>
+                        <h2 class="photo-teaser__title">ライブ・ポートレート撮影も承っています</h2>
+                        <p class="photo-teaser__text">関東を中心にライブ撮影・ポートレート撮影を行っています。料金や機材は専用ページをご覧ください。</p>
+                    </div>
+                    <div class="photo-teaser__actions">
+                        <a href="photo.html" class="cta-link cta-link--outline">撮影依頼について →</a>
+                        <a href="https://www.instagram.com/carameltp_cam/" target="_blank" rel="noopener noreferrer" class="text-link">Instagram @carameltp_cam</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
 
     <!-- Footer -->
     <footer class="footer">
         <div class="container footer-content">
             <div class="footer-links">
+                <a href="#price">料金</a>
+                <a href="#flow">依頼の流れ</a>
+                <a href="photo.html">撮影依頼</a>
                 <a href="privacy.html">プライバシーポリシー</a>
                 <a href="terms.html">利用規約</a>
             </div>
@@ -286,9 +476,11 @@
 
     <!-- Fixed CTA -->
     <div class="fixed-cta" id="fixed-cta">
-        <a href="#contact">Contact</a>
+        <a href="#price" class="fixed-cta__sub">料金</a>
+        <a href="https://x.com/caRamelTp_nico" target="_blank" rel="noopener noreferrer" class="fixed-cta__main">依頼する</a>
     </div>
 
+    <script src="assets/data/mix-works.js"></script>
     <script src="assets/js/main.js"></script>
 </body>
 

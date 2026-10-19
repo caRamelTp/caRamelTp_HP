@@ -10,19 +10,26 @@
 </head>
 
 <body>
-    <header class="header">
+    <header class="header" id="header">
         <div class="container">
             <a href="index.html" class="logo">caRamel#</a>
-            <nav class="nav-menu">
-                <a href="index.html" class="nav-link">Home</a>
-                <a href="gallery.html" class="nav-link">Gallery</a>
-                <a href="photo.html" class="nav-link">Photo</a>
-                <a href="service.html" class="nav-link">Service</a>
-                <a href="contact.html" class="nav-link">Contact</a>
-            </nav>
-            <button class="nav-toggle" aria-label="メニュー"><span></span><span></span><span></span></button>
+            <button class="nav-toggle" id="nav-toggle" aria-label="メニュー" aria-controls="nav-menu" aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
         </div>
     </header>
+
+    <nav class="nav-menu" id="nav-menu" aria-label="メインメニュー">
+        <a href="index.html#works" class="nav-link">実績</a>
+        <a href="index.html#price" class="nav-link">料金</a>
+        <a href="index.html#prepare" class="nav-link">音源の準備</a>
+        <a href="index.html#flow" class="nav-link">依頼の流れ</a>
+        <a href="index.html#contact" class="nav-link">お問い合わせ</a>
+        <a href="photo.html" class="nav-link nav-link--sub">Photo</a>
+        <a href="https://x.com/caRamelTp_nico" target="_blank" rel="noopener noreferrer" class="nav-cta">依頼する</a>
+    </nav>
 
     <section class="page-header">
         <div class="container">
@@ -54,6 +61,9 @@
     <footer class="footer">
         <div class="container footer-content">
             <div class="footer-links">
+                <a href="index.html#price">料金</a>
+                <a href="index.html#flow">依頼の流れ</a>
+                <a href="photo.html">撮影依頼</a>
                 <a href="privacy.html">プライバシーポリシー</a>
                 <a href="terms.html">利用規約</a>
             </div>
