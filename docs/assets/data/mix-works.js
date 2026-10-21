@@ -1,6 +1,6 @@
 // 自動生成ファイル（scripts/update-mix-works.mjs）。手動編集しないでください。
 window.MIX_WORKS = {
-  "updatedAt": "2026-10-20T21:15:01.347Z",
+  "updatedAt": "2026-10-21T21:15:37.496Z",
   "playlistId": "PLBazqsiSyyIzC6DXES-f0s0yifo024Qll",
   "total": 562,
   "recent": [
@@ -8,56 +8,56 @@ window.MIX_WORKS = {
       "id": "URQRMkDA-FE",
       "title": "けん／ご主人様、ロックのお時間にございます【cover】",
       "channel": "けん",
-      "views": 78,
+      "views": 79,
       "published": null
     },
     {
       "id": "vtxZs1dZBiM",
       "title": "【アカペラ】近づけてるかな？『#ヤラララ 』歌ってみた【新人歌い手ユニット】",
       "channel": "ろこみゅ〜ん",
-      "views": 3470,
+      "views": 3505,
       "published": null
     },
     {
       "id": "v2kxikUnBfk",
       "title": "抜刀 / 晴乃なぎ【歌ってみた】",
       "channel": "Nagi Ch. 晴乃なぎ",
-      "views": 271,
+      "views": 280,
       "published": null
     },
     {
       "id": "YodgdNW1Q2A",
       "title": "【必見】簡単にチャンネル登録者1万人達成する方法って？『'ヤラララ' (YARARARA)』",
       "channel": "ろこみゅ〜ん",
-      "views": 3998,
+      "views": 4035,
       "published": null
     },
     {
       "id": "IMtNPG1y9VQ",
       "title": "【= LOVE/アカペラ】甘さ以外も見つけてくれる？♡ 『お姫様の作り方』歌ってみた【新人歌い手ユニット】",
       "channel": "ろこみゅ〜ん",
-      "views": 2358,
+      "views": 2371,
       "published": null
     },
     {
       "id": "7qON1ofKh9c",
       "title": "Flyer! / 蕗奈×晴乃なぎ×碧芽かぶ×りっぷるん。【歌ってみた】",
       "channel": "Nagi Ch. 晴乃なぎ",
-      "views": 205,
+      "views": 208,
       "published": null
     },
     {
       "id": "GwLKj-Z2AXE",
       "title": "【可愛すぎて悶絶】あれにしか聞こえない！？ピカチュウ4連発 #アニポケ",
       "channel": "ろこみゅ〜ん",
-      "views": 9187,
+      "views": 9207,
       "published": null
     },
     {
       "id": "VKQS14cbcZo",
       "title": "Wink / 晴乃なぎ【歌ってみた】",
       "channel": "Nagi Ch. 晴乃なぎ",
-      "views": 644,
+      "views": 653,
       "published": null
     }
   ],
