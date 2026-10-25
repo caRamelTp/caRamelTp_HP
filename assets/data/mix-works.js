@@ -1,21 +1,42 @@
 // 自動生成ファイル（scripts/update-mix-works.mjs）。手動編集しないでください。
 window.MIX_WORKS = {
-  "updatedAt": "2026-10-24T20:13:28.503Z",
+  "updatedAt": "2026-10-25T20:23:06.380Z",
   "playlistId": "PLBazqsiSyyIzC6DXES-f0s0yifo024Qll",
-  "total": 562,
+  "total": 565,
   "recent": [
+    {
+      "id": "euZKJ_2z2wA",
+      "title": "Tell Your World / 晴乃なぎ【歌ってみた】",
+      "channel": "Nagi Ch. 晴乃なぎ",
+      "views": 82,
+      "published": null
+    },
+    {
+      "id": "vS1rxGK0zTI",
+      "title": "ラプラスショコラ　真面目に歌ってみた",
+      "channel": "笑むアロワナ",
+      "views": 124,
+      "published": null
+    },
+    {
+      "id": "4XdNqt6sdoc",
+      "title": "【Dance practice】壊愛ディナーショー / diabell",
+      "channel": "diabell",
+      "views": 2016,
+      "published": null
+    },
     {
       "id": "URQRMkDA-FE",
       "title": "けん／ご主人様、ロックのお時間にございます【cover】",
       "channel": "けん",
-      "views": 84,
+      "views": 86,
       "published": null
     },
     {
       "id": "vtxZs1dZBiM",
       "title": "【アカペラ】近づけてるかな？『#ヤラララ 』歌ってみた【新人歌い手ユニット】",
       "channel": "ろこみゅ〜ん",
-      "views": 3632,
+      "views": 3673,
       "published": null
     },
     {
@@ -36,28 +57,7 @@ window.MIX_WORKS = {
       "id": "YodgdNW1Q2A",
       "title": "【必見】簡単にチャンネル登録者1万人達成する方法って？『'ヤラララ' (YARARARA)』",
       "channel": "ろこみゅ〜ん",
-      "views": 4158,
-      "published": null
-    },
-    {
-      "id": "IMtNPG1y9VQ",
-      "title": "【= LOVE/アカペラ】甘さ以外も見つけてくれる？♡ 『お姫様の作り方』歌ってみた【新人歌い手ユニット】",
-      "channel": "ろこみゅ〜ん",
-      "views": 2429,
-      "published": null
-    },
-    {
-      "id": "GwLKj-Z2AXE",
-      "title": "【可愛すぎて悶絶】あれにしか聞こえない！？ピカチュウ4連発 #アニポケ",
-      "channel": "ろこみゅ〜ん",
-      "views": 9291,
-      "published": null
-    },
-    {
-      "id": "VKQS14cbcZo",
-      "title": "Wink / 晴乃なぎ【歌ってみた】",
-      "channel": "Nagi Ch. 晴乃なぎ",
-      "views": 681,
+      "views": 4206,
       "published": null
     }
   ],
@@ -66,7 +66,7 @@ window.MIX_WORKS = {
       "id": "DzP0jXgOC4I",
       "title": "hololive production COUNTDOWN LIVE 2023▷2024 -hololive side-",
       "channel": "hololive ホロライブ - VTuber Group",
-      "views": 4750000,
+      "views": 4760000,
       "published": null
     },
     {
