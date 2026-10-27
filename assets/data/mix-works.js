@@ -1,6 +1,6 @@
 // 自動生成ファイル（scripts/update-mix-works.mjs）。手動編集しないでください。
 window.MIX_WORKS = {
-  "updatedAt": "2026-10-26T22:18:06.922Z",
+  "updatedAt": "2026-10-27T21:49:15.376Z",
   "playlistId": "PLBazqsiSyyIzC6DXES-f0s0yifo024Qll",
   "total": 565,
   "recent": [
@@ -8,21 +8,21 @@ window.MIX_WORKS = {
       "id": "euZKJ_2z2wA",
       "title": "Tell Your World / 晴乃なぎ【歌ってみた】",
       "channel": "Nagi Ch. 晴乃なぎ",
-      "views": 141,
+      "views": 156,
       "published": null
     },
     {
       "id": "vS1rxGK0zTI",
       "title": "ラプラスショコラ　真面目に歌ってみた",
       "channel": "笑むアロワナ",
-      "views": 148,
+      "views": 152,
       "published": null
     },
     {
       "id": "4XdNqt6sdoc",
       "title": "【Dance practice】壊愛ディナーショー / diabell",
       "channel": "diabell",
-      "views": 2395,
+      "views": 2592,
       "published": null
     },
     {
@@ -36,7 +36,7 @@ window.MIX_WORKS = {
       "id": "vtxZs1dZBiM",
       "title": "【アカペラ】近づけてるかな？『#ヤラララ 』歌ってみた【新人歌い手ユニット】",
       "channel": "ろこみゅ〜ん",
-      "views": 3699,
+      "views": 3726,
       "published": null
     },
     {
@@ -50,14 +50,14 @@ window.MIX_WORKS = {
       "id": "7qON1ofKh9c",
       "title": "Flyer! / 蕗奈×晴乃なぎ×碧芽かぶ×りっぷるん。【歌ってみた】",
       "channel": "Nagi Ch. 晴乃なぎ",
-      "views": 211,
+      "views": 212,
       "published": null
     },
     {
       "id": "GwLKj-Z2AXE",
       "title": "【可愛すぎて悶絶】あれにしか聞こえない！？ピカチュウ4連発 #アニポケ",
       "channel": "ろこみゅ〜ん",
-      "views": 9341,
+      "views": 9357,
       "published": null
     }
   ],
