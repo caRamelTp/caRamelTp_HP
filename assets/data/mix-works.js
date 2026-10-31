@@ -1,6 +1,6 @@
 // 自動生成ファイル（scripts/update-mix-works.mjs）。手動編集しないでください。
 window.MIX_WORKS = {
-  "updatedAt": "2026-10-30T21:56:08.625Z",
+  "updatedAt": "2026-10-31T20:58:52.183Z",
   "playlistId": "PLBazqsiSyyIzC6DXES-f0s0yifo024Qll",
   "total": 565,
   "recent": [
@@ -8,56 +8,56 @@ window.MIX_WORKS = {
       "id": "euZKJ_2z2wA",
       "title": "Tell Your World / 晴乃なぎ【歌ってみた】",
       "channel": "Nagi Ch. 晴乃なぎ",
-      "views": 188,
+      "views": 197,
       "published": null
     },
     {
       "id": "vS1rxGK0zTI",
       "title": "ラプラスショコラ　真面目に歌ってみた",
       "channel": "笑むアロワナ",
-      "views": 161,
+      "views": 165,
       "published": null
     },
     {
       "id": "4XdNqt6sdoc",
       "title": "【Dance practice】壊愛ディナーショー / diabell",
       "channel": "diabell",
-      "views": 3089,
-      "published": null
-    },
-    {
-      "id": "vtxZs1dZBiM",
-      "title": "【アカペラ】近づけてるかな？『#ヤラララ 』歌ってみた【新人歌い手ユニット】",
-      "channel": "ろこみゅ〜ん",
-      "views": 3827,
+      "views": 3207,
       "published": null
     },
     {
       "id": "URQRMkDA-FE",
       "title": "けん／ご主人様、ロックのお時間にございます【cover】",
       "channel": "けん",
-      "views": 89,
+      "views": 90,
+      "published": null
+    },
+    {
+      "id": "vtxZs1dZBiM",
+      "title": "【アカペラ】近づけてるかな？『#ヤラララ 』歌ってみた【新人歌い手ユニット】",
+      "channel": "ろこみゅ〜ん",
+      "views": 3861,
       "published": null
     },
     {
       "id": "v2kxikUnBfk",
       "title": "抜刀 / 晴乃なぎ【歌ってみた】",
       "channel": "Nagi Ch. 晴乃なぎ",
-      "views": 282,
+      "views": 283,
       "published": null
     },
     {
       "id": "GwLKj-Z2AXE",
       "title": "【可愛すぎて悶絶】あれにしか聞こえない！？ピカチュウ4連発 #アニポケ",
       "channel": "ろこみゅ〜ん",
-      "views": 9424,
+      "views": 9453,
       "published": null
     },
     {
       "id": "YodgdNW1Q2A",
       "title": "【必見】簡単にチャンネル登録者1万人達成する方法って？『'ヤラララ' (YARARARA)』",
       "channel": "ろこみゅ〜ん",
-      "views": 4352,
+      "views": 4372,
       "published": null
     }
   ],
