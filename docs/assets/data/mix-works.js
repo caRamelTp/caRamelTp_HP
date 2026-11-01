@@ -1,14 +1,28 @@
 // 自動生成ファイル（scripts/update-mix-works.mjs）。手動編集しないでください。
 window.MIX_WORKS = {
-  "updatedAt": "2026-10-31T20:58:52.183Z",
+  "updatedAt": "2026-11-01T21:41:58.961Z",
   "playlistId": "PLBazqsiSyyIzC6DXES-f0s0yifo024Qll",
-  "total": 565,
+  "total": 567,
   "recent": [
+    {
+      "id": "QL5UbBxwA9U",
+      "title": "Happy Halloween Rap ver.",
+      "channel": "りゅうが",
+      "views": 192,
+      "published": null
+    },
+    {
+      "id": "es6Uq9pqImo",
+      "title": "【にじさんじ】DOGLAND / VACHSS【歌って踊ってみた / すきゃんどーる】",
+      "channel": "【公式】すきゃんどーるchannel",
+      "views": 4649,
+      "published": null
+    },
     {
       "id": "euZKJ_2z2wA",
       "title": "Tell Your World / 晴乃なぎ【歌ってみた】",
       "channel": "Nagi Ch. 晴乃なぎ",
-      "views": 197,
+      "views": 209,
       "published": null
     },
     {
@@ -22,7 +36,7 @@ window.MIX_WORKS = {
       "id": "4XdNqt6sdoc",
       "title": "【Dance practice】壊愛ディナーショー / diabell",
       "channel": "diabell",
-      "views": 3207,
+      "views": 3328,
       "published": null
     },
     {
@@ -36,7 +50,7 @@ window.MIX_WORKS = {
       "id": "vtxZs1dZBiM",
       "title": "【アカペラ】近づけてるかな？『#ヤラララ 』歌ってみた【新人歌い手ユニット】",
       "channel": "ろこみゅ〜ん",
-      "views": 3861,
+      "views": 3904,
       "published": null
     },
     {
@@ -44,20 +58,6 @@ window.MIX_WORKS = {
       "title": "抜刀 / 晴乃なぎ【歌ってみた】",
       "channel": "Nagi Ch. 晴乃なぎ",
       "views": 283,
-      "published": null
-    },
-    {
-      "id": "GwLKj-Z2AXE",
-      "title": "【可愛すぎて悶絶】あれにしか聞こえない！？ピカチュウ4連発 #アニポケ",
-      "channel": "ろこみゅ〜ん",
-      "views": 9453,
-      "published": null
-    },
-    {
-      "id": "YodgdNW1Q2A",
-      "title": "【必見】簡単にチャンネル登録者1万人達成する方法って？『'ヤラララ' (YARARARA)』",
-      "channel": "ろこみゅ〜ん",
-      "views": 4372,
       "published": null
     }
   ],
