@@ -1196,6 +1196,16 @@ p, h1, h2, h3, h4, h5, h6 { overflow-wrap: break-word; }
     font-size: 1rem;
     font-weight: 600;
     margin-bottom: 0.875rem;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    gap: 0.25rem 0.75rem;
+}
+
+.plan-group-title__note {
+    font-size: 0.8125rem;
+    font-weight: 400;
+    color: var(--color-text-light);
 }
 
 .plan-grid {

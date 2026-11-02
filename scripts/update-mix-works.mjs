@@ -7,15 +7,18 @@
 // を assets/data/mix-works.js（と docs/ 側）に書き出します。
 //
 // 使い方:
-//   node scripts/update-mix-works.mjs
+//   node scripts/update-mix-works.mjs             … 通常更新（新しい動画の投稿日だけ取得）
+//   node scripts/update-mix-works.mjs --fill-all  … 全動画の投稿日を取得してキャッシュ
 //   （環境変数 YT_API_KEY があれば YouTube Data API v3 を使用。
 //     無ければ公開ページから取得します）
+//
+// 取得済みの投稿日は scripts/mix-works-state.json に保存して再利用します。
 //
 // GitHub Actions（.github/workflows/update-mix-works.yml）で
 // 毎日自動実行されます。
 // ===================================
 
-import { writeFileSync, mkdirSync, existsSync } from 'node:fs';
+import { writeFileSync, readFileSync, mkdirSync, existsSync } from 'node:fs';
 import { dirname, join } from 'node:path';
 import { fileURLToPath } from 'node:url';
 
@@ -139,15 +142,60 @@ function findContinuation(node) {
     return null;
 }
 
-async function fetchPublishDate(id) {
+const DATE_RE = /^\d{4}-\d{2}-\d{2}$/;
+
+// 投稿日の取得（GitHub Actions 等ではブロックされることがあるため 2 通り試す）
+async function fetchPublishDate(id, innertube) {
+    // 1) 動画ページ
     try {
         const res = await fetch(`https://www.youtube.com/watch?v=${id}&hl=en`, { headers: { 'User-Agent': UA, 'Accept-Language': 'en' } });
         const html = await res.text();
         const m = html.match(/"publishDate":"([^"]+)"/) || html.match(/"uploadDate":"([^"]+)"/) || html.match(/itemprop="datePublished" content="([^"]+)"/);
-        return m ? m[1].slice(0, 10) : null;
-    } catch {
-        return null;
+        const d = m && m[1].slice(0, 10);
+        if (d && DATE_RE.test(d)) return d;
+    } catch { /* 次の方法へ */ }
+
+    // 2) innertube player API
+    if (innertube?.apiKey) {
+        try {
+            const res = await fetch(`https://www.youtube.com/youtubei/v1/player?key=${innertube.apiKey}&prettyPrint=false`, {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json', 'User-Agent': UA },
+                body: JSON.stringify({
+                    context: { client: { clientName: 'WEB', clientVersion: innertube.clientVersion, hl: 'en', gl: 'US' } },
+                    videoId: id,
+                }),
+            });
+            const json = await res.json();
+            const mf = json?.microformat?.playerMicroformatRenderer;
+            const d = (mf?.publishDate || mf?.uploadDate || '').slice(0, 10);
+            if (DATE_RE.test(d)) return d;
+        } catch { /* 取得できなければ null */ }
     }
+    return null;
+}
+
+// 取得済みの投稿日キャッシュ（投稿日は変わらないので一度取れたら再利用）
+const STATE_FILE = join(ROOT, 'scripts', 'mix-works-state.json');
+
+function loadState() {
+    try {
+        const json = JSON.parse(readFileSync(STATE_FILE, 'utf8'));
+        return { published: json.published || {} };
+    } catch {
+        return { published: {} };
+    }
+}
+
+function saveState(state) {
+    const sorted = Object.fromEntries(Object.entries(state.published).sort(([a], [b]) => a.localeCompare(b)));
+    writeFileSync(STATE_FILE, `${JSON.stringify({ published: sorted }, null, 2)}\n`, 'utf8');
+}
+
+// 投稿日が分からない動画は「◯か月前」表記から推定した日付で並べる
+function estimateDate(ageDays) {
+    if (!Number.isFinite(ageDays)) return '0000-00-00';
+    return new Date(Date.now() - ageDays * 86400000).toISOString().slice(0, 10);
 }
 
 async function fetchWithoutApi() {
@@ -186,13 +234,7 @@ async function fetchWithoutApi() {
     // 重複除去
     const seen = new Set();
     const unique = videos.filter(v => v.id && !seen.has(v.id) && seen.add(v.id));
-
-    // 新着候補だけ正確な投稿日を取得
-    const candidates = [...unique].sort((a, b) => a.ageDays - b.ageDays).slice(0, KEEP * 2);
-    for (const v of candidates) {
-        v.published = await fetchPublishDate(v.id);
-    }
-    return unique;
+    return { videos: unique, innertube: { apiKey, clientVersion } };
 }
 
 // -----------------------------------
@@ -200,18 +242,36 @@ async function fetchWithoutApi() {
 // -----------------------------------
 async function main() {
     const key = process.env.YT_API_KEY;
-    const videos = key ? await fetchWithApi(key) : await fetchWithoutApi();
+    const fillAll = process.argv.includes('--fill-all'); // 全動画の投稿日を取得してキャッシュ（初回・手動用）
+    const { videos, innertube } = key ? { videos: await fetchWithApi(key), innertube: null } : await fetchWithoutApi();
     if (!videos.length) throw new Error('動画が取得できませんでした');
 
+    // 投稿日: API の値 → キャッシュ → 新規取得 の順で埋める
+    const state = loadState();
+    for (const v of videos) {
+        if (v.published) state.published[v.id] = v.published;
+        else if (state.published[v.id]) v.published = state.published[v.id];
+    }
+    const missing = videos
+        .filter(v => !v.published)
+        .sort((a, b) => (a.ageDays ?? Infinity) - (b.ageDays ?? Infinity));
+    const targets = fillAll ? missing : missing.slice(0, KEEP * 3);
+    let fetched = 0;
+    for (const v of targets) {
+        const d = await fetchPublishDate(v.id, innertube);
+        if (d) {
+            v.published = d;
+            state.published[v.id] = d;
+            fetched++;
+        }
+    }
+    console.log(`publish dates: fetched ${fetched}/${targets.length}, cached ${Object.keys(state.published).length}`);
+
     const strip = ({ id, title, channel, views, published }) => ({ id, title, channel, views, published: published || null });
+    const sortKey = v => v.published || estimateDate(v.ageDays);
 
     const recent = [...videos]
-        .sort((a, b) => {
-            if (a.published && b.published) return b.published.localeCompare(a.published);
-            if (a.published) return -1;
-            if (b.published) return 1;
-            return (a.ageDays ?? Infinity) - (b.ageDays ?? Infinity);
-        })
+        .sort((a, b) => sortKey(b).localeCompare(sortKey(a)))
         .slice(0, KEEP)
         .map(strip);
 
@@ -232,6 +292,7 @@ async function main() {
         writeFileSync(out, body, 'utf8');
         console.log(`wrote ${out}`);
     }
+    saveState(state);
     console.log(`total=${videos.length} recent=${recent.length} popular=${popular.length}`);
 }
 
