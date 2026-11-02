@@ -37,6 +37,8 @@ caRamel_HP/
 ### Mix Works（新着 / 再生数順）の更新
 - データ: `assets/data/mix-works.js`（自動生成）
 - 手動更新: `node scripts/update-mix-works.mjs`（ルートと `docs/` の両方に書き出します）
+- 全動画の投稿日を取り直す: `node scripts/update-mix-works.mjs --fill-all`
+- 投稿日キャッシュ: `scripts/mix-works-state.json`（GitHub Actions からは投稿日が取得できないことがあるため、一度取れた日付を保存して再利用。取れない場合は「◯か月前」表記から推定して並べます）
 - 自動更新: `.github/workflows/update-mix-works.yml` が毎日 03:00 JST に実行
 - 任意: リポジトリの Secrets に `YT_API_KEY`（YouTube Data API v3）を登録すると、より正確に取得できます
 
