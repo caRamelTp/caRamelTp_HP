@@ -1,6 +1,6 @@
 // 自動生成ファイル（scripts/update-mix-works.mjs）。手動編集しないでください。
 window.MIX_WORKS = {
-  "updatedAt": "2026-11-04T23:12:29.373Z",
+  "updatedAt": "2026-11-05T23:16:20.794Z",
   "playlistId": "PLBazqsiSyyIzC6DXES-f0s0yifo024Qll",
   "total": 568,
   "recent": [
@@ -8,28 +8,28 @@ window.MIX_WORKS = {
       "id": "pOfXbezZOh4",
       "title": "最果てのカルマ / 人夢木瞬",
       "channel": "人夢木 瞬 / Hakanagi Shun",
-      "views": 47,
+      "views": 60,
       "published": null
     },
     {
       "id": "QL5UbBxwA9U",
       "title": "Happy Halloween Rap ver.",
       "channel": "りゅうが",
-      "views": 628,
+      "views": 647,
       "published": "2026-11-01"
     },
     {
       "id": "es6Uq9pqImo",
       "title": "【にじさんじ】DOGLAND / VACHSS【歌って踊ってみた / すきゃんどーる】",
       "channel": "【公式】すきゃんどーるchannel",
-      "views": 7838,
+      "views": 8249,
       "published": "2026-10-31"
     },
     {
       "id": "euZKJ_2z2wA",
       "title": "Tell Your World / 晴乃なぎ【歌ってみた】",
       "channel": "Nagi Ch. 晴乃なぎ",
-      "views": 235,
+      "views": 240,
       "published": "2026-10-25"
     },
     {
@@ -43,21 +43,21 @@ window.MIX_WORKS = {
       "id": "4XdNqt6sdoc",
       "title": "【Dance practice】壊愛ディナーショー / diabell",
       "channel": "diabell",
-      "views": 3624,
+      "views": 3716,
       "published": "2026-10-23"
     },
     {
       "id": "URQRMkDA-FE",
       "title": "けん／ご主人様、ロックのお時間にございます【cover】",
       "channel": "けん",
-      "views": 92,
+      "views": 94,
       "published": "2026-10-14"
     },
     {
       "id": "vtxZs1dZBiM",
       "title": "【アカペラ】近づけてるかな？『#ヤラララ 』歌ってみた【新人歌い手ユニット】",
       "channel": "ろこみゅ〜ん",
-      "views": 4007,
+      "views": 4030,
       "published": "2026-10-09"
     }
   ],
@@ -115,7 +115,7 @@ window.MIX_WORKS = {
       "id": "mTsFeE3cfeM",
       "title": "【MV】カワイイ育成計画/BADQN♡",
       "channel": "RINDO Entertainment",
-      "views": 300000,
+      "views": 310000,
       "published": "2025-08-30"
     }
   ]
