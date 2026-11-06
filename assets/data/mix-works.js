@@ -1,6 +1,6 @@
 // 自動生成ファイル（scripts/update-mix-works.mjs）。手動編集しないでください。
 window.MIX_WORKS = {
-  "updatedAt": "2026-11-05T23:16:20.794Z",
+  "updatedAt": "2026-11-06T22:42:58.765Z",
   "playlistId": "PLBazqsiSyyIzC6DXES-f0s0yifo024Qll",
   "total": 568,
   "recent": [
@@ -8,56 +8,56 @@ window.MIX_WORKS = {
       "id": "pOfXbezZOh4",
       "title": "最果てのカルマ / 人夢木瞬",
       "channel": "人夢木 瞬 / Hakanagi Shun",
-      "views": 60,
-      "published": null
+      "views": 63,
+      "published": "2026-11-02"
     },
     {
       "id": "QL5UbBxwA9U",
       "title": "Happy Halloween Rap ver.",
       "channel": "りゅうが",
-      "views": 647,
+      "views": 658,
       "published": "2026-11-01"
     },
     {
       "id": "es6Uq9pqImo",
       "title": "【にじさんじ】DOGLAND / VACHSS【歌って踊ってみた / すきゃんどーる】",
       "channel": "【公式】すきゃんどーるchannel",
-      "views": 8249,
+      "views": 8444,
       "published": "2026-10-31"
     },
     {
       "id": "euZKJ_2z2wA",
       "title": "Tell Your World / 晴乃なぎ【歌ってみた】",
       "channel": "Nagi Ch. 晴乃なぎ",
-      "views": 240,
+      "views": 246,
       "published": "2026-10-25"
     },
     {
       "id": "vS1rxGK0zTI",
       "title": "ラプラスショコラ　真面目に歌ってみた",
       "channel": "笑むアロワナ",
-      "views": 172,
+      "views": 173,
       "published": "2026-10-24"
     },
     {
       "id": "4XdNqt6sdoc",
       "title": "【Dance practice】壊愛ディナーショー / diabell",
       "channel": "diabell",
-      "views": 3716,
+      "views": 3790,
       "published": "2026-10-23"
     },
     {
       "id": "URQRMkDA-FE",
       "title": "けん／ご主人様、ロックのお時間にございます【cover】",
       "channel": "けん",
-      "views": 94,
+      "views": 95,
       "published": "2026-10-14"
     },
     {
       "id": "vtxZs1dZBiM",
       "title": "【アカペラ】近づけてるかな？『#ヤラララ 』歌ってみた【新人歌い手ユニット】",
       "channel": "ろこみゅ〜ん",
-      "views": 4030,
+      "views": 4070,
       "published": "2026-10-09"
     }
   ],
