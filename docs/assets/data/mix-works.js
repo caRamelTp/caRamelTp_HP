@@ -1,35 +1,35 @@
 // 自動生成ファイル（scripts/update-mix-works.mjs）。手動編集しないでください。
 window.MIX_WORKS = {
-  "updatedAt": "2026-11-08T21:40:55.844Z",
+  "updatedAt": "2026-11-10T01:10:56.883Z",
   "playlistId": "PLBazqsiSyyIzC6DXES-f0s0yifo024Qll",
-  "total": 568,
+  "total": 567,
   "recent": [
     {
       "id": "pOfXbezZOh4",
       "title": "最果てのカルマ / 人夢木瞬",
       "channel": "人夢木 瞬 / Hakanagi Shun",
-      "views": 78,
+      "views": 80,
       "published": "2026-11-02"
     },
     {
       "id": "QL5UbBxwA9U",
       "title": "Happy Halloween Rap ver.",
       "channel": "りゅうが",
-      "views": 683,
+      "views": 691,
       "published": "2026-11-01"
     },
     {
       "id": "es6Uq9pqImo",
       "title": "【にじさんじ】DOGLAND / VACHSS【歌って踊ってみた / すきゃんどーる】",
       "channel": "【公式】すきゃんどーるchannel",
-      "views": 8646,
+      "views": 8741,
       "published": "2026-10-31"
     },
     {
       "id": "euZKJ_2z2wA",
       "title": "Tell Your World / 晴乃なぎ【歌ってみた】",
       "channel": "Nagi Ch. 晴乃なぎ",
-      "views": 258,
+      "views": 266,
       "published": "2026-10-25"
     },
     {
@@ -43,21 +43,21 @@ window.MIX_WORKS = {
       "id": "4XdNqt6sdoc",
       "title": "【Dance practice】壊愛ディナーショー / diabell",
       "channel": "diabell",
-      "views": 3948,
+      "views": 4031,
       "published": "2026-10-23"
     },
     {
       "id": "URQRMkDA-FE",
       "title": "けん／ご主人様、ロックのお時間にございます【cover】",
       "channel": "けん",
-      "views": 98,
+      "views": 100,
       "published": "2026-10-14"
     },
     {
       "id": "vtxZs1dZBiM",
       "title": "【アカペラ】近づけてるかな？『#ヤラララ 』歌ってみた【新人歌い手ユニット】",
       "channel": "ろこみゅ〜ん",
-      "views": 4160,
+      "views": 4186,
       "published": "2026-10-09"
     }
   ],
@@ -66,7 +66,7 @@ window.MIX_WORKS = {
       "id": "DzP0jXgOC4I",
       "title": "hololive production COUNTDOWN LIVE 2023▷2024 -hololive side-",
       "channel": "hololive ホロライブ - VTuber Group",
-      "views": 4760000,
+      "views": 4770000,
       "published": "2023-12-31"
     },
     {
@@ -94,7 +94,7 @@ window.MIX_WORKS = {
       "id": "SJ_4gVunMZM",
       "title": "【LIVE VIDEO】夢喰NEON -2nd Anniversary LIVE-",
       "channel": "放課後NEON【夢喰NEON】",
-      "views": 590000,
+      "views": 600000,
       "published": "2024-05-22"
     },
     {
