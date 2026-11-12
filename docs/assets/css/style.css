@@ -210,16 +210,6 @@ p, h1, h2, h3, h4, h5, h6 { overflow-wrap: break-word; }
     padding: 0 var(--space-md);
 }
 
-.hero::before {
-    content: '';
-    position: absolute;
-    inset: 0;
-    background:
-        radial-gradient(ellipse at 30% 20%, rgba(196, 149, 106, 0.05) 0%, transparent 50%),
-        radial-gradient(ellipse at 70% 80%, rgba(139, 115, 85, 0.03) 0%, transparent 50%);
-    pointer-events: none;
-}
-
 .hero-content {
     position: relative;
     z-index: 1;
@@ -265,51 +255,6 @@ p, h1, h2, h3, h4, h5, h6 { overflow-wrap: break-word; }
     padding: 0.4rem 0.875rem;
     border: 1px solid var(--color-border);
     border-radius: 999px;
-}
-
-.hero-scroll {
-    position: absolute;
-    bottom: 2.5rem;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 0.5rem;
-    opacity: 0;
-    animation: fadeIn 0.8s var(--ease-out) 0.5s forwards;
-}
-
-.hero-scroll span {
-    font-family: var(--font-en);
-    font-size: 0.6rem;
-    letter-spacing: 0.2em;
-    text-transform: uppercase;
-    color: var(--color-text-muted);
-}
-
-.hero-scroll-line {
-    width: 1px;
-    height: 36px;
-    background: var(--color-text-muted);
-    position: relative;
-    overflow: hidden;
-}
-
-.hero-scroll-line::after {
-    content: '';
-    position: absolute;
-    top: -100%;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: var(--color-accent);
-    animation: scrollLine 2s var(--ease) infinite;
-}
-
-@keyframes scrollLine {
-    0% { top: -100%; }
-    50% { top: 100%; }
-    100% { top: 100%; }
 }
 
 @keyframes fadeUp {
@@ -1128,12 +1073,6 @@ p, h1, h2, h3, h4, h5, h6 { overflow-wrap: break-word; }
     border-radius: 999px;
 }
 
-.clients__list .clients__featured {
-    border-color: var(--color-accent);
-    color: var(--color-text);
-    font-weight: 600;
-}
-
 .clients__list .clients__more {
     background: transparent;
     border-color: transparent;
@@ -1242,24 +1181,6 @@ p, h1, h2, h3, h4, h5, h6 { overflow-wrap: break-word; }
     border-radius: var(--radius);
     padding: 1.5rem 1rem;
     text-align: center;
-}
-
-.plan-card--featured {
-    border-color: var(--color-accent);
-    box-shadow: 0 0 0 1px var(--color-accent);
-}
-
-.plan-card__badge {
-    position: absolute;
-    top: -0.7rem;
-    left: 50%;
-    transform: translateX(-50%);
-    font-size: 0.6875rem;
-    font-weight: 600;
-    color: #fff;
-    background: var(--color-accent);
-    padding: 0.1rem 0.75rem;
-    border-radius: 999px;
 }
 
 .plan-card__name {
@@ -1815,5 +1736,132 @@ section[id] { scroll-margin-top: 70px; }
     .price-table tr {
         display: block;
         padding: 0.5rem 0;
+    }
+}
+
+/* ===================================
+   Polish pass
+   unslop by Damir Sokolovsky (@heydamir, https://github.com/heydamir/unslop, CC BY 4.0) の
+   チェック項目に沿った仕上げ。配色・書体・レイアウトは既存のまま、細部だけを整える
+   =================================== */
+:root {
+    /* 文字色のコントラストを 4.5:1 以上に */
+    --color-text-muted: #707070;
+    --color-accent-text: #7A6249;
+}
+
+/* 英字ラベルは大文字＋字間広めをやめて落ち着かせる */
+.section-label,
+.hero-eyebrow {
+    text-transform: none;
+    letter-spacing: 0.02em;
+    font-size: 0.8125rem;
+    color: var(--color-accent-text);
+}
+
+.hero-subtitle { letter-spacing: 0.04em; }
+
+.quick-guide__list a span {
+    letter-spacing: 0.02em;
+    color: var(--color-accent-text);
+}
+
+/* アクセント色を文字に使う箇所は濃い方に（薄い茶色は白地で読みにくい） */
+.price-table td:last-child { color: var(--color-accent-text); }
+.work-card__rank,
+.tag--required { background: var(--color-accent-text); }
+.photo-card h3 { color: var(--color-accent-text); }
+
+/* 金額などの数字は桁をそろえる */
+.price-table td:last-child,
+.plan-card__price,
+.hero-facts__num { font-variant-numeric: tabular-nums; }
+
+/* 料金のポイントはバッジではなく静かなテキストに */
+.price-merits { gap: 0.25rem 1.25rem; }
+
+.price-merits li {
+    background: none;
+    border: none;
+    padding: 0;
+    color: var(--color-text-light);
+    font-weight: 500;
+}
+
+/* 角丸: すべてをピル型にせず、要素の大きさで使い分ける */
+.cta-link,
+.nav-cta,
+.copy-btn,
+.works-expand,
+.fixed-cta a,
+.social-link { border-radius: 10px; }
+
+.works-tabs { border-radius: 10px; }
+.works-tab { border-radius: 6px; }
+
+.clients__list li,
+.tag { border-radius: 6px; }
+
+/* ホバーで浮き上がる・拡大する動きをやめ、色の変化だけに */
+.cta-link:hover,
+.fixed-cta a:hover { transform: none; }
+
+.work-card__media:hover img { transform: none; opacity: 0.85; }
+
+/* transition: all をやめ、変化するプロパティだけを指定 */
+.header { transition: background-color 0.3s var(--ease-out), box-shadow 0.3s var(--ease-out); }
+
+/* スクロールでヘッダーの高さが変わらないように（余白のアニメーションは重く、跳ねて見える） */
+.header,
+.header.scrolled { padding: 1rem 0; }
+
+@media (min-width: 961px) {
+    .nav-menu,
+    .header.scrolled ~ .nav-menu {
+        padding: 1rem var(--space-md);
+        transition: none;
+    }
+}
+.nav-toggle span { transition: transform 0.2s var(--ease-out), opacity 0.2s var(--ease-out); }
+.fixed-cta { transition: opacity 0.3s var(--ease-out), visibility 0.3s, transform 0.3s var(--ease-out); }
+
+.cta-link,
+.fixed-cta a,
+.social-link,
+.quick-guide__list a,
+.works-tab,
+.copy-btn {
+    transition: color 0.15s var(--ease-out), background-color 0.15s var(--ease-out), border-color 0.15s var(--ease-out), box-shadow 0.15s var(--ease-out);
+}
+
+/* スクロールのたびに要素がふわっと出る演出をやめる（読み込み時のヒーローだけ残す） */
+.fade-in,
+.fade-in.visible {
+    opacity: 1;
+    transform: none;
+    transition: none;
+}
+
+@keyframes fadeUp {
+    from { opacity: 0; transform: translateY(8px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* キーボード操作時のフォーカスを見えるように */
+a:focus-visible,
+button:focus-visible,
+summary:focus-visible {
+    outline: 2px solid var(--color-accent-text);
+    outline-offset: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
     }
 }
