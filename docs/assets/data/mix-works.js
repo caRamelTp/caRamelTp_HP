@@ -1,6 +1,6 @@
 // 自動生成ファイル（scripts/update-mix-works.mjs）。手動編集しないでください。
 window.MIX_WORKS = {
-  "updatedAt": "2026-11-12T23:13:11.855Z",
+  "updatedAt": "2026-11-13T23:14:15.000Z",
   "playlistId": "PLBazqsiSyyIzC6DXES-f0s0yifo024Qll",
   "total": 568,
   "recent": [
@@ -8,35 +8,35 @@ window.MIX_WORKS = {
       "id": "_pO3KkofMJA",
       "title": "ジェヘナ / 晴乃なぎ【歌ってみた】",
       "channel": "Nagi Ch. 晴乃なぎ",
-      "views": 72,
+      "views": 74,
       "published": null
     },
     {
       "id": "pOfXbezZOh4",
       "title": "最果てのカルマ / 人夢木瞬",
       "channel": "人夢木 瞬 / Hakanagi Shun",
-      "views": 91,
+      "views": 92,
       "published": "2026-11-02"
     },
     {
       "id": "QL5UbBxwA9U",
       "title": "Happy Halloween Rap ver.",
       "channel": "りゅうが",
-      "views": 732,
+      "views": 741,
       "published": "2026-11-01"
     },
     {
       "id": "es6Uq9pqImo",
       "title": "【にじさんじ】DOGLAND / VACHSS【歌って踊ってみた / すきゃんどーる】",
       "channel": "【公式】すきゃんどーるchannel",
-      "views": 8906,
+      "views": 8966,
       "published": "2026-10-31"
     },
     {
       "id": "euZKJ_2z2wA",
       "title": "Tell Your World / 晴乃なぎ【歌ってみた】",
       "channel": "Nagi Ch. 晴乃なぎ",
-      "views": 279,
+      "views": 282,
       "published": "2026-10-25"
     },
     {
@@ -50,14 +50,14 @@ window.MIX_WORKS = {
       "id": "4XdNqt6sdoc",
       "title": "【Dance practice】壊愛ディナーショー / diabell",
       "channel": "diabell",
-      "views": 4237,
+      "views": 4284,
       "published": "2026-10-23"
     },
     {
       "id": "URQRMkDA-FE",
       "title": "けん／ご主人様、ロックのお時間にございます【cover】",
       "channel": "けん",
-      "views": 102,
+      "views": 104,
       "published": "2026-10-14"
     }
   ],
