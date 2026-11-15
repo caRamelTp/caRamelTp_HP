@@ -1,6 +1,6 @@
 // 自動生成ファイル（scripts/update-mix-works.mjs）。手動編集しないでください。
 window.MIX_WORKS = {
-  "updatedAt": "2026-11-14T21:57:57.815Z",
+  "updatedAt": "2026-11-15T22:28:20.433Z",
   "playlistId": "PLBazqsiSyyIzC6DXES-f0s0yifo024Qll",
   "total": 568,
   "recent": [
@@ -8,7 +8,7 @@ window.MIX_WORKS = {
       "id": "_pO3KkofMJA",
       "title": "ジェヘナ / 晴乃なぎ【歌ってみた】",
       "channel": "Nagi Ch. 晴乃なぎ",
-      "views": 78,
+      "views": 86,
       "published": null
     },
     {
@@ -22,21 +22,21 @@ window.MIX_WORKS = {
       "id": "QL5UbBxwA9U",
       "title": "Happy Halloween Rap ver.",
       "channel": "りゅうが",
-      "views": 748,
+      "views": 754,
       "published": "2026-11-01"
     },
     {
       "id": "es6Uq9pqImo",
       "title": "【にじさんじ】DOGLAND / VACHSS【歌って踊ってみた / すきゃんどーる】",
       "channel": "【公式】すきゃんどーるchannel",
-      "views": 9010,
+      "views": 9061,
       "published": "2026-10-31"
     },
     {
       "id": "euZKJ_2z2wA",
       "title": "Tell Your World / 晴乃なぎ【歌ってみた】",
       "channel": "Nagi Ch. 晴乃なぎ",
-      "views": 284,
+      "views": 287,
       "published": "2026-10-25"
     },
     {
@@ -50,7 +50,7 @@ window.MIX_WORKS = {
       "id": "4XdNqt6sdoc",
       "title": "【Dance practice】壊愛ディナーショー / diabell",
       "channel": "diabell",
-      "views": 4344,
+      "views": 4401,
       "published": "2026-10-23"
     },
     {
