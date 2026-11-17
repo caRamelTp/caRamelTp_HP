@@ -1,14 +1,14 @@
 // 自動生成ファイル（scripts/update-mix-works.mjs）。手動編集しないでください。
 window.MIX_WORKS = {
-  "updatedAt": "2026-11-15T22:28:20.433Z",
+  "updatedAt": "2026-11-17T01:34:50.584Z",
   "playlistId": "PLBazqsiSyyIzC6DXES-f0s0yifo024Qll",
-  "total": 568,
+  "total": 567,
   "recent": [
     {
       "id": "_pO3KkofMJA",
       "title": "ジェヘナ / 晴乃なぎ【歌ってみた】",
       "channel": "Nagi Ch. 晴乃なぎ",
-      "views": 86,
+      "views": 93,
       "published": null
     },
     {
@@ -22,14 +22,14 @@ window.MIX_WORKS = {
       "id": "QL5UbBxwA9U",
       "title": "Happy Halloween Rap ver.",
       "channel": "りゅうが",
-      "views": 754,
+      "views": 759,
       "published": "2026-11-01"
     },
     {
       "id": "es6Uq9pqImo",
       "title": "【にじさんじ】DOGLAND / VACHSS【歌って踊ってみた / すきゃんどーる】",
       "channel": "【公式】すきゃんどーるchannel",
-      "views": 9061,
+      "views": 9106,
       "published": "2026-10-31"
     },
     {
@@ -43,14 +43,14 @@ window.MIX_WORKS = {
       "id": "vS1rxGK0zTI",
       "title": "ラプラスショコラ　真面目に歌ってみた",
       "channel": "笑むアロワナ",
-      "views": 180,
+      "views": 181,
       "published": "2026-10-24"
     },
     {
       "id": "4XdNqt6sdoc",
       "title": "【Dance practice】壊愛ディナーショー / diabell",
       "channel": "diabell",
-      "views": 4401,
+      "views": 4477,
       "published": "2026-10-23"
     },
     {
@@ -73,7 +73,7 @@ window.MIX_WORKS = {
       "id": "q-aa0FaofWo",
       "title": "【ほぼMV風】推しの顔が良すぎて困る / 夢喰NEON",
       "channel": "放課後NEON【夢喰NEON】",
-      "views": 1220000,
+      "views": 1230000,
       "published": "2023-03-06"
     },
     {
