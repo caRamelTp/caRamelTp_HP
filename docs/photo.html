@@ -13,6 +13,8 @@
             max-width: 540px;
             margin: 0 auto;
             text-align: center;
+            border: none;
+            background: none;
         }
 
         .instagram-link {
@@ -22,10 +24,10 @@
             padding: 1rem 2rem;
             background: var(--color-text);
             color: white;
-            border-radius: var(--radius-full);
+            border-radius: 10px;
             font-weight: 500;
-            font-size: 1.1rem;
-            transition: var(--transition-normal);
+            font-size: 1rem;
+            transition: background-color 0.15s var(--ease-out);
             margin-top: 2rem;
         }
 
@@ -42,9 +44,10 @@
         }
 
         .photo-card h3 {
-            color: var(--color-accent-primary);
+            color: var(--color-accent-text);
             margin-bottom: 1rem;
             font-size: 1.25rem;
+            font-weight: 600;
         }
 
         .price-table {
@@ -65,10 +68,15 @@
             font-weight: 500;
         }
 
+        .price-table th:last-child {
+            text-align: right;
+        }
+
         .price-highlight {
             font-size: 1.5rem;
             font-weight: 500;
-            color: var(--color-accent-primary);
+            color: var(--color-accent-text);
+            font-variant-numeric: tabular-nums;
         }
 
         .equipment-list {
