@@ -1,64 +1,64 @@
 // 自動生成ファイル（scripts/update-mix-works.mjs）。手動編集しないでください。
 window.MIX_WORKS = {
-  "updatedAt": "2026-11-18T23:53:15.525Z",
+  "updatedAt": "2026-11-20T00:18:22.482Z",
   "playlistId": "PLBazqsiSyyIzC6DXES-f0s0yifo024Qll",
-  "total": 567,
+  "total": 100,
   "recent": [
-    {
-      "id": "_pO3KkofMJA",
-      "title": "ジェヘナ / 晴乃なぎ【歌ってみた】",
-      "channel": "Nagi Ch. 晴乃なぎ",
-      "views": 97,
-      "published": null
-    },
-    {
-      "id": "pOfXbezZOh4",
-      "title": "最果てのカルマ / 人夢木瞬",
-      "channel": "人夢木 瞬 / Hakanagi Shun",
-      "views": 97,
-      "published": "2026-11-02"
-    },
-    {
-      "id": "QL5UbBxwA9U",
-      "title": "Happy Halloween Rap ver.",
-      "channel": "りゅうが",
-      "views": 775,
-      "published": "2026-11-01"
-    },
     {
       "id": "es6Uq9pqImo",
       "title": "【にじさんじ】DOGLAND / VACHSS【歌って踊ってみた / すきゃんどーる】",
       "channel": "【公式】すきゃんどーるchannel",
-      "views": 9186,
+      "views": 9243,
       "published": "2026-10-31"
     },
     {
-      "id": "euZKJ_2z2wA",
-      "title": "Tell Your World / 晴乃なぎ【歌ってみた】",
-      "channel": "Nagi Ch. 晴乃なぎ",
-      "views": 292,
-      "published": "2026-10-25"
+      "id": "GwLKj-Z2AXE",
+      "title": "【可愛すぎて悶絶】あれにしか聞こえない！？ピカチュウ4連発 #アニポケ",
+      "channel": "ろこみゅ〜ん",
+      "views": 9954,
+      "published": "2026-09-04"
     },
     {
-      "id": "vS1rxGK0zTI",
-      "title": "ラプラスショコラ　真面目に歌ってみた",
-      "channel": "笑むアロワナ",
-      "views": 182,
-      "published": "2026-10-24"
+      "id": "9_tBXedO3Co",
+      "title": "【Music video】メンタルバグアウト/じわっときてる",
+      "channel": "じわっときてる",
+      "views": 76000,
+      "published": "2026-08-14"
     },
     {
-      "id": "4XdNqt6sdoc",
-      "title": "【Dance practice】壊愛ディナーショー / diabell",
-      "channel": "diabell",
-      "views": 4654,
-      "published": "2026-10-23"
+      "id": "--E2KKvcCw8",
+      "title": "【MV】五寸釘♡インフレーション/ki:ki",
+      "channel": "【公式】ki:ki",
+      "views": 8291,
+      "published": "2026-08-10"
     },
     {
-      "id": "URQRMkDA-FE",
-      "title": "けん／ご主人様、ロックのお時間にございます【cover】",
-      "channel": "けん",
-      "views": 106,
-      "published": "2026-10-14"
+      "id": "_jjNAFSHGL0",
+      "title": "【イヤホン推奨】'ヤラララ' (YARARARA) 歌ってみた 【ろこみゅ〜ん】",
+      "channel": "ろこみゅ〜ん",
+      "views": 7433,
+      "published": "2026-07-17"
+    },
+    {
+      "id": "EeFRDcrz0_U",
+      "title": "目のハイライト消す #くださいませチャレンジ 『愛くださいませ』 歌ってみた 【ろこみゅ〜ん】",
+      "channel": "ろこみゅ〜ん",
+      "views": 8940,
+      "published": "2026-07-10"
+    },
+    {
+      "id": "zl-WCahfwrE",
+      "title": "【Dance Practice Video】ネクロマンス/ki:ki",
+      "channel": "【公式】ki:ki",
+      "views": 8583,
+      "published": "2026-07-10"
+    },
+    {
+      "id": "6HHfBjOLPmE",
+      "title": "【MV風】バグってラブ/Untitle",
+      "channel": "Un title",
+      "views": 65000,
+      "published": "2026-06-30"
     }
   ],
   "popular": [
@@ -80,7 +80,7 @@ window.MIX_WORKS = {
       "id": "wXeoRshiaco",
       "title": "【LIVE VIDEO】コドクアソビ/夢喰NEON@幕張メッセ幕張イベントホール",
       "channel": "放課後NEON【夢喰NEON】",
-      "views": 1170000,
+      "views": 1180000,
       "published": "2024-02-25"
     },
     {
