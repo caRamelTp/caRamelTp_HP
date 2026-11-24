@@ -1,6 +1,6 @@
 // 自動生成ファイル（scripts/update-mix-works.mjs）。手動編集しないでください。
 window.MIX_WORKS = {
-  "updatedAt": "2026-11-22T23:14:49.882Z",
+  "updatedAt": "2026-11-24T03:48:04.784Z",
   "playlistId": "PLBazqsiSyyIzC6DXES-f0s0yifo024Qll",
   "total": 567,
   "recent": [
@@ -22,14 +22,14 @@ window.MIX_WORKS = {
       "id": "QL5UbBxwA9U",
       "title": "Happy Halloween Rap ver.",
       "channel": "りゅうが",
-      "views": 786,
+      "views": 796,
       "published": "2026-11-01"
     },
     {
       "id": "es6Uq9pqImo",
       "title": "【にじさんじ】DOGLAND / VACHSS【歌って踊ってみた / すきゃんどーる】",
       "channel": "【公式】すきゃんどーるchannel",
-      "views": 9368,
+      "views": 9421,
       "published": "2026-10-31"
     },
     {
@@ -50,7 +50,7 @@ window.MIX_WORKS = {
       "id": "4XdNqt6sdoc",
       "title": "【Dance practice】壊愛ディナーショー / diabell",
       "channel": "diabell",
-      "views": 4959,
+      "views": 5034,
       "published": "2026-10-23"
     },
     {
